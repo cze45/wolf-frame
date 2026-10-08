@@ -6,10 +6,10 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Wolf Frame – A-frame vikendice po meri</title>
 <meta name="description" content="A-frame vikendice po meri tvog placa. Kragujevac, cela Srbija i Crna Gora. Pošalji plac i budžet, javljamo okvirnu cenu i savet.">
-<meta name="theme-color" content="#2b1a10">
+<meta name="theme-color" content="#3a2316">
 <link rel="icon" href="assets/img/logo.webp" type="image/webp">
 <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/montserrat-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sourceserif4-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
 <main id="top">
 
 <!-- 1. HERO -->
-<section class="hero">
+<section class="hero before-roof">
   <div class="wrap hero__grid">
     <div class="hero__txt">
       <p class="eyebrow">Iz Kragujevca, radimo po celoj Srbiji i u Crnoj Gori</p>
@@ -49,14 +49,16 @@
       <a class="link-down" href="#proces">Pogledaj kako nastaje</a>
     </div>
     <figure class="hero__img">
-      <img src="assets/img/proces-gotovo.webp" width="491" height="722" alt="A-frame vikendica sa drvenom oblogom, tamnim limenim krovom i nadstrešnicom" fetchpriority="high">
-      <figcaption>Naš objekat 5x7 (35&nbsp;m²). <span class="ph">[Zamena: originalna fotografija u punoj rezoluciji]</span></figcaption>
+      <div class="hero__frame">
+        <img src="assets/img/proces-gotovo.webp" width="491" height="722" alt="A-frame vikendica sa drvenom oblogom, tamnim limenim krovom i nadstrešnicom" fetchpriority="high">
+      </div>
+      <figcaption><span class="num">5×7</span> metara, 35&nbsp;m². Naš objekat. <span class="ph">[Zamena: originalna fotografija u punoj rezoluciji]</span></figcaption>
     </figure>
   </div>
 </section>
 
 <!-- 2. CENA ODMAH -->
-<section class="sec sec--tint" id="cena">
+<section class="sec sec--tint roof" id="cena">
   <div class="wrap">
     <h2>Koliko košta A-frame vikendica?</h2>
     <p class="sec__intro">Najčešće pitanje je „Cena?“. Evo okvira. Konačna cena zavisi od veličine, nivoa završnosti i tvog placa, i dobijaš je u ponudi.</p>
@@ -93,7 +95,7 @@
 </section>
 
 <!-- 3. PROBLEM -->
-<section class="sec" id="problem">
+<section class="sec before-roof" id="problem">
   <div class="wrap wrap--narrow">
     <h2>Cena bez obima ne znači ništa</h2>
     <p>Pitaš „Cena?“ i dobiješ broj.</p>
@@ -106,7 +108,7 @@
 </section>
 
 <!-- 4. MEHANIZAM -->
-<section class="sec sec--dark" id="mehanizam">
+<section class="sec sec--dark roof" id="mehanizam">
   <div class="wrap">
     <h2>Gradnja na videlu: sve možeš da proveriš pre prvog poziva</h2>
     <p class="sec__intro">Ne moraš da nam veruješ na reč. Cenu, proces i naš rad možeš da proveriš sam.</p>
@@ -135,7 +137,7 @@
   <div class="wrap">
     <h2>Ovako nastaje A-frame vikendica</h2>
     <p class="sec__intro">Faze izrade na jednom od naših objekata (5x7, 35&nbsp;m²).</p>
-    <ol class="steps">
+    <ol class="steps" tabindex="0" role="group" aria-label="Faze izrade, listaj udesno">
       <li>
         <figure>
           <img src="assets/img/proces-skelet.webp" width="490" height="562" loading="lazy" alt="Drveni A-frame skelet na betonskoj ploči">
