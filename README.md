@@ -1,6 +1,6 @@
 # Wolf Frame – landing page (koncept)
 
-Statična stranica, bez build koraka. `index.html` + `css/` + `js/` + `assets/img/`.
+Statična stranica, bez build koraka. `index.html` + `css/` + `js/` + `assets/img/` + `assets/fonts/` (Montserrat, lokalno, bez spoljnih zahteva).
 Sve putanje su relativne, pa radi i pod `/wolf-frame/` na GitHub Pages i na Cloudflare Pages.
 
 ## Pregled
