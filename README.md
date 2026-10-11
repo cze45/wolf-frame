@@ -1,14 +1,17 @@
-# Wolf Frame – landing page (koncept)
+# Wolf Frame – landing stranica
 
-Statična stranica, bez build koraka. `index.html` + `css/` + `js/` + `assets/img/` + `assets/fonts/` (Montserrat i Source Serif 4, lokalno, bez spoljnih zahteva).
-Sve putanje su relativne, pa radi i pod `/wolf-frame/` na GitHub Pages i na Cloudflare Pages.
+Koncept landing stranice za Wolf Frame (A-frame vikendice po meri).
 
-## Pregled
-- GitHub Pages: Settings → Pages → Deploy from a branch → izaberi granu i `/ (root)`.
-- Lokalno: `python3 -m http.server 8000` pa otvori `http://localhost:8000`.
+`index.html` je samostalan fajl: fontovi, skripte i stilovi su ugrađeni, nema spoljnih zavisnosti.
 
-## Pre objave
-- Stranica ima `noindex` i traku "Koncept za pregled". Ukloni obe kad firma odobri.
-- Sva žuta polja (`class="ph"`) su podaci koji još nedostaju. Pronađi ih sa `grep -n 'class="ph"' index.html`.
-- Forma: `data-endpoint=""` u `index.html`. Dok je prazan, forma samo prikazuje poruku. Upiši URL (Formspree, Cloudflare Worker...) kad se poveže prijem upita.
-- Fotografije procesa su isečci iz Instagram priča (niska rezolucija). Zameni originalima.
+## Objavljivanje na GitHub Pages
+
+1. Napravi novi repozitorijum i ubaci `index.html` (i ovaj README) u koren.
+2. Settings → Pages → Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
+3. Stranica je dostupna na `https://<korisnik>.github.io/<repo>/`.
+
+## Napomene
+
+- Polja za slike su prazna; slike treba ubaciti u izvorni dizajn i ponovo izvesti.
+- Forma za upit još nije povezana sa prijemom poruka.
+- Žuta polja `[ovako]` čekaju podatke od firme.
