@@ -1,13 +1,118 @@
 (function () {
   'use strict';
 
-  // Lepljiva traka se sakriva dok je forma na ekranu
-  var stick = document.getElementById('stick');
-  var upit = document.getElementById('upit');
-  if (stick && upit && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function (e) {
-      stick.classList.toggle('is-hidden', e[0].isIntersecting);
-    }, { threshold: 0.15 }).observe(upit);
+  var MOBILE = window.matchMedia('(max-width: 719.98px)');
+
+  // Padajući meniji u zaglavlju (miš: lebdenje, tastatura i dodir: klik)
+  var menus = Array.prototype.slice.call(document.querySelectorAll('.menu'));
+  function setMenu(m, open, pinned) {
+    m.classList.toggle('is-open', open);
+    m.dataset.pinned = open && pinned ? '1' : '';
+    m.querySelector('.menu__btn').setAttribute('aria-expanded', String(open));
+  }
+  function closeMenus(except) {
+    menus.forEach(function (m) { if (m !== except) setMenu(m, false); });
+  }
+  menus.forEach(function (m) {
+    var btn = m.querySelector('.menu__btn');
+    m.addEventListener('mouseenter', function () {
+      if (window.matchMedia('(hover: hover)').matches) { closeMenus(m); setMenu(m, true, false); }
+    });
+    m.addEventListener('mouseleave', function () {
+      if (window.matchMedia('(hover: hover)').matches) setMenu(m, false);
+    });
+    btn.addEventListener('click', function () {
+      var pinned = m.classList.contains('is-open') && m.dataset.pinned === '1';
+      closeMenus(m);
+      setMenu(m, !pinned, true);
+    });
+    m.addEventListener('click', function (e) {
+      if (e.target.closest('.menu__list a')) setMenu(m, false);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.menu')) closeMenus();
+  });
+
+  // Mobilni meni
+  var burger = document.querySelector('.burger');
+  var drawer = document.getElementById('mobilni-meni');
+  var lastFocus = null;
+  function lock(on) {
+    var b = document.body;
+    var sbw = window.innerWidth - document.documentElement.clientWidth;
+    b.style.paddingRight = on && sbw > 0 ? sbw + 'px' : '';
+    b.style.overflow = on ? 'hidden' : '';
+  }
+  function drawerOpen(on) {
+    if (!burger || !drawer) return;
+    var isOpen = document.body.classList.contains('drawer-open');
+    if (on === isOpen) return;
+    document.body.classList.toggle('drawer-open', on);
+    burger.setAttribute('aria-expanded', String(on));
+    drawer.setAttribute('aria-hidden', String(!on));
+    lock(on);
+    if (on) {
+      lastFocus = document.activeElement;
+      var x = drawer.querySelector('.drawer__x');
+      if (x) x.focus();
+    } else if (lastFocus && lastFocus.focus) {
+      lastFocus.focus();
+    }
+  }
+  if (burger) burger.addEventListener('click', function () { drawerOpen(true); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-close-drawer]'), function (el) {
+    el.addEventListener('click', function () { drawerOpen(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    drawerOpen(false);
+    closeMenus();
+  });
+  function onBreakpoint() { if (!MOBILE.matches) drawerOpen(false); }
+  if (MOBILE.addEventListener) MOBILE.addEventListener('change', onBreakpoint);
+  else MOBILE.addListener(onBreakpoint);
+
+  // Naslovi: H1 uvek staje u dva reda, a H2 na telefonu u jedan red
+  var h1 = document.getElementById('h1');
+  function fitH1() {
+    if (!h1) return;
+    var w = h1.clientWidth;
+    if (!w) return;
+    h1.style.fontSize = '';
+    var cur = parseFloat(getComputedStyle(h1).fontSize);
+    var m = 0;
+    Array.prototype.forEach.call(h1.querySelectorAll('span'), function (s) { m = Math.max(m, s.scrollWidth); });
+    if (!m) return;
+    var next = Math.max(26, Math.min(56, Math.floor(cur * w / m * 0.98)));
+    if (Math.abs(next - cur) > 0.5) h1.style.fontSize = next + 'px';
+  }
+  function fitH2() {
+    var mob = MOBILE.matches;
+    Array.prototype.forEach.call(document.querySelectorAll('main h2'), function (el) {
+      el.style.fontSize = '';
+      if (!mob) return;
+      var cw = el.clientWidth, sw = el.scrollWidth;
+      if (cw && sw > cw) {
+        var cur = parseFloat(getComputedStyle(el).fontSize);
+        el.style.fontSize = Math.floor(cur * cw / sw * 0.97 * 10) / 10 + 'px';
+      }
+    });
+  }
+  function fit() { fitH1(); fitH2(); }
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  window.addEventListener('resize', fit, { passive: true });
+  window.addEventListener('orientationchange', fit);
+
+  // Pitanja: otvoreno je samo jedno
+  var faq = document.getElementById('faq');
+  if (faq) {
+    faq.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (!d.open) return;
+      Array.prototype.forEach.call(faq.querySelectorAll('details[open]'), function (o) { if (o !== d) o.open = false; });
+    }, true);
   }
 
   // Forma

@@ -20,36 +20,93 @@
 </div>
 
 <header class="top">
-  <div class="wrap top__in">
+  <div class="top__in">
     <a class="brand" href="#top" aria-label="Wolf Frame, početak stranice">
-      <img src="assets/img/logo.webp" width="48" height="48" alt="">
       <span class="brand__txt" translate="no"><b>WOLF FRAME</b><small>Izrada drvenih kuća</small></span>
     </a>
-    <a class="top__tel" href="tel:+381642524562">064&nbsp;252&nbsp;45&nbsp;62</a>
+
+    <nav class="nav" aria-label="Glavna navigacija">
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-haspopup="true" aria-expanded="false">Ponuda<span aria-hidden="true">▾</span></button>
+        <div class="menu__pop">
+          <div class="menu__list">
+            <a href="#cena">Cene i nivoi</a>
+            <a href="#mehanizam">Kako radimo</a>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-haspopup="true" aria-expanded="false">Radovi<span aria-hidden="true">▾</span></button>
+        <div class="menu__pop">
+          <div class="menu__list">
+            <a href="#proces">Proces izrade</a>
+            <a href="#unutra">Unutrašnjost</a>
+            <a href="#kupci">Utisci kupaca</a>
+          </div>
+        </div>
+      </div>
+      <div class="menu menu--right">
+        <button class="menu__btn" type="button" aria-haspopup="true" aria-expanded="false">Kontakt<span aria-hidden="true">▾</span></button>
+        <div class="menu__pop">
+          <div class="menu__list">
+            <a href="tel:+381642524562">Pozovite nas</a>
+            <a href="https://www.instagram.com/wolf.framevikendice/" rel="noopener" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/vuk.bulatovic.418918" rel="noopener" target="_blank">Facebook</a>
+            <a href="#faq">Česta pitanja</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <a class="top__cta" href="#upit">Pošalji upit</a>
+
+    <button class="burger" type="button" aria-label="Otvori meni" aria-controls="mobilni-meni" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<div class="drawer__scrim" data-close-drawer aria-hidden="true"></div>
+<aside class="drawer" id="mobilni-meni" aria-label="Meni" aria-hidden="true">
+  <div class="drawer__head">
+    <span>MENI</span>
+    <button class="drawer__x" type="button" data-close-drawer aria-label="Zatvori meni">×</button>
+  </div>
+  <nav aria-label="Mobilna navigacija">
+    <div class="drawer__grp">
+      <p>Ponuda</p>
+      <a href="#cena" data-close-drawer>Cene i nivoi</a>
+      <a href="#mehanizam" data-close-drawer>Kako radimo</a>
+    </div>
+    <div class="drawer__grp">
+      <p>Radovi</p>
+      <a href="#proces" data-close-drawer>Proces izrade</a>
+      <a href="#unutra" data-close-drawer>Unutrašnjost</a>
+      <a href="#kupci" data-close-drawer>Utisci kupaca</a>
+    </div>
+    <div class="drawer__grp">
+      <p>Kontakt</p>
+      <a href="tel:+381642524562" data-close-drawer>Pozovite nas</a>
+      <a href="https://www.instagram.com/wolf.framevikendice/" rel="noopener" target="_blank" data-close-drawer>Instagram</a>
+      <a href="https://www.facebook.com/vuk.bulatovic.418918" rel="noopener" target="_blank" data-close-drawer>Facebook</a>
+      <a href="#faq" data-close-drawer>Česta pitanja</a>
+    </div>
+  </nav>
+  <a class="drawer__cta" href="#upit" data-close-drawer>Pošalji upit</a>
+</aside>
 
 <main id="top">
 
 <!-- 1. HERO -->
-<section class="hero before-roof">
+<section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__txt">
       <p class="eyebrow">Iz Kragujevca, radimo po celoj Srbiji i u Crnoj Gori</p>
-      <h1>A-frame vikendica po meri tvog placa. Cena i faze gradnje na videlu.</h1>
-      <p class="lead">Pošalji mesto placa, približnu kvadraturu i budžet. Javljamo ti se sa okvirnom cenom i savetom šta stane, bez obaveze.</p>
+      <h1 id="h1"><span>A-frame vikendica</span><span>po meri tvog placa.</span></h1>
       <div class="cta-row">
-        <a class="btn btn--primary" href="#upit">Dobij okvirnu cenu za svoj plac</a>
-        <a class="btn btn--ghost" href="tel:+381642524562">Pozovi 064&nbsp;252&nbsp;45&nbsp;62</a>
+        <a class="btn btn--primary" href="#upit">Koliko bi ovo koštalo</a>
+        <a class="btn btn--ghost" href="tel:+381642524562">Pozovite nas</a>
       </div>
-      <blockquote class="hero__quote">
-        „Slike govore sve, izrada vrhunska.“
-        <cite>kupac, komentar na Facebooku</cite>
-      </blockquote>
-      <a class="link-down" href="#proces">Pogledaj kako nastaje</a>
     </div>
-    <figure class="hero__img">
-      <div class="hero__frame">
+    <figure class="hero__fig">
+      <div class="hero__img">
         <img src="assets/img/proces-gotovo.webp" width="491" height="722" alt="A-frame vikendica sa drvenom oblogom, tamnim limenim krovom i nadstrešnicom" fetchpriority="high">
       </div>
       <figcaption><span class="num">5×7</span> metara, 35&nbsp;m². Naš objekat. <span class="ph">[Zamena: originalna fotografija u punoj rezoluciji]</span></figcaption>
@@ -57,257 +114,290 @@
   </div>
 </section>
 
-<!-- 2. CENA ODMAH -->
-<section class="sec sec--tint roof" id="cena">
+<!-- 2. CENA -->
+<section class="sec sec--sand sec--roof" id="cena">
   <div class="wrap">
     <h2>Koliko košta A-frame vikendica?</h2>
-    <p class="sec__intro">Najčešće pitanje je „Cena?“. Evo okvira. Konačna cena zavisi od veličine, nivoa završnosti i tvog placa, i dobijaš je u ponudi.</p>
-    <div class="tbl-wrap">
-      <table class="price">
-        <thead>
-          <tr><th>Nivo</th><th>Šta je uključeno</th><th>Šta nije uključeno</th><th>Cena</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th data-l="Nivo">Nivo A <span class="ph">[naziv]</span></th>
-            <td data-l="Šta je uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Šta nije uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Cena"><span class="ph">[CENA]</span></td>
-          </tr>
-          <tr>
-            <th data-l="Nivo">Nivo B <span class="ph">[naziv]</span></th>
-            <td data-l="Šta je uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Šta nije uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Cena"><span class="ph">[CENA]</span></td>
-          </tr>
-          <tr>
-            <th data-l="Nivo">Nivo C <span class="ph">[naziv]</span></th>
-            <td data-l="Šta je uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Šta nije uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Cena"><span class="ph">[CENA]</span></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="price-intro">
+      <p class="lead">Najčešće pitanje je „Cena?“. Evo okvira. Konačna cena zavisi od veličine, nivoa završnosti i tvog placa, i dobijaš je u ponudi.</p>
+      <a class="link-arrow" href="#upit">Okvirna cena za Vaš plac <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="tiers">
+      <article class="tier">
+        <div class="tier__img"><div class="slot"><span>Slika: Nivo A</span></div></div>
+        <div class="tier__body">
+          <h3>Nivo A <span class="ph">[naziv]</span></h3>
+          <p><span class="ph">[Kratak opis: šta je uključeno, a šta nije]</span></p>
+          <div class="tier__price"><span>Cena od</span><span class="tier__sum"><span class="ph">[CENA]</span></span></div>
+        </div>
+      </article>
+      <article class="tier">
+        <div class="tier__img"><div class="slot"><span>Slika: Nivo B</span></div></div>
+        <div class="tier__body">
+          <h3>Nivo B <span class="ph">[naziv]</span></h3>
+          <p><span class="ph">[Kratak opis: šta je uključeno, a šta nije]</span></p>
+          <div class="tier__price"><span>Cena od</span><span class="tier__sum"><span class="ph">[CENA]</span></span></div>
+        </div>
+      </article>
+      <article class="tier">
+        <div class="tier__img"><div class="slot"><span>Slika: Nivo C</span></div></div>
+        <div class="tier__body">
+          <h3>Nivo C <span class="ph">[naziv]</span></h3>
+          <p><span class="ph">[Kratak opis: šta je uključeno, a šta nije]</span></p>
+          <div class="tier__price"><span>Cena od</span><span class="tier__sum"><span class="ph">[CENA]</span></span></div>
+        </div>
+      </article>
     </div>
     <p class="note">Primer: A-frame 5x7 (35&nbsp;m²), <span class="ph">[nivo]</span>: <span class="ph">[CENA]</span>. Okvirna cena za tvoj plac je besplatna <span class="ph">[potvrditi]</span>.</p>
-    <p><a class="btn btn--primary" href="#upit">Dobij okvirnu cenu za svoj plac</a></p>
   </div>
 </section>
 
-<!-- 3. PROBLEM -->
-<section class="sec before-roof" id="problem">
-  <div class="wrap wrap--narrow">
-    <h2>Cena bez obima ne znači ništa</h2>
-    <p>Pitaš „Cena?“ i dobiješ broj.</p>
-    <p>Kod jednih je to siva faza po kvadratu. Kod drugih ključ u ruke. Kod trećih komplet koji montiraš sam.</p>
-    <p><strong>Tri broja, tri različite stvari.</strong></p>
-    <p>Zato odmah pitaš: dal je ključ u ruke? Da li je temelj u ceni? Šta znači siva gradnja?</p>
-    <p>Odgovore obično moraš da tražiš po komentarima, u inboxu, preko telefona.</p>
-    <p class="turn">Kod nas je drugačije.</p>
-  </div>
-</section>
-
-<!-- 4. MEHANIZAM -->
-<section class="sec sec--dark roof" id="mehanizam">
+<!-- 3. GRADNJA NA VIDELU -->
+<section class="sec sec--dark sec--roof" id="mehanizam">
   <div class="wrap">
-    <h2>Gradnja na videlu: sve možeš da proveriš pre prvog poziva</h2>
-    <p class="sec__intro">Ne moraš da nam veruješ na reč. Cenu, proces i naš rad možeš da proveriš sam.</p>
-    <ol class="cards">
-      <li class="card">
+    <h2 class="h2--center h2--gap">Gradnja na videlu</h2>
+    <ol class="mech">
+      <li>
         <h3>Cena sa obimom</h3>
         <p>Za svaki nivo piše šta je uključeno, a šta nije. Vidiš to u tabeli, pre ponude.</p>
         <a href="#cena">Pogledaj tabelu</a>
       </li>
-      <li class="card">
+      <li>
         <h3>Proces na pravom objektu</h3>
         <p>Pokazujemo faze izrade: skelet, krov, obloga, unutrašnjost. Vidiš kako izgleda posao, a ne samo gotovu sliku.</p>
         <a href="#proces">Pogledaj faze</a>
       </li>
-      <li class="card">
+      <li>
         <h3>Rad koji možeš da proveriš</h3>
         <p>Kupci pišu šta misle o našem radu. <span class="ph">[Obilazak gotovog objekta: POTREBNA INFORMACIJA]</span></p>
-        <a href="#kupci">Pročitaj kupce</a>
+        <a href="#kupci">Pročitaj recenzije</a>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- 5. PROCES -->
+<!-- 4. PROCES -->
 <section class="sec" id="proces">
   <div class="wrap">
     <h2>Ovako nastaje A-frame vikendica</h2>
-    <p class="sec__intro">Faze izrade na jednom od naših objekata (5x7, 35&nbsp;m²).</p>
-    <ol class="steps" tabindex="0" role="group" aria-label="Faze izrade, listaj udesno">
+    <p class="lead">Faze izrade na jednom od naših objekata (5x7, 35&nbsp;m²).</p>
+    <ol class="steps" aria-label="Faze izrade">
       <li>
         <figure>
-          <img src="assets/img/proces-skelet.webp" width="490" height="562" loading="lazy" alt="Drveni A-frame skelet na betonskoj ploči">
-          <figcaption><b>1. Skelet.</b> Drvena A-frame konstrukcija na pripremljenoj ploči.</figcaption>
+          <div class="slot slot--3x4"><img src="assets/img/proces-skelet.webp" width="490" height="562" alt="Drveni A-frame skelet na betonskoj ploči" loading="lazy"></div>
+          <figcaption><b>Skelet.</b> Drvena A-frame konstrukcija na pripremljenoj ploči.</figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src="assets/img/proces-krov.webp" width="490" height="743" loading="lazy" alt="Krov A-frame kuće prekriven reflektujućom folijom">
-          <figcaption><b>2. Krov.</b> Krov dobija foliju.</figcaption>
+          <div class="slot slot--3x4"><img src="assets/img/proces-krov.webp" width="490" height="743" alt="Krov A-frame kuće prekriven reflektujućom folijom" loading="lazy"></div>
+          <figcaption><b>Krov.</b> Krov dobija foliju.</figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src="assets/img/proces-podloga.webp" width="494" height="753" loading="lazy" alt="Radnik na krovu A-frame kuće, tamna krovna podloga">
-          <figcaption><b>3. Podloga.</b> Postavlja se tamna krovna podloga.</figcaption>
+          <div class="slot slot--3x4"><img src="assets/img/proces-podloga.webp" width="494" height="753" alt="Radnik na krovu A-frame kuće, tamna krovna podloga" loading="lazy"></div>
+          <figcaption><b>Podloga.</b> Postavlja se tamna krovna podloga.</figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src="assets/img/proces-gotovo.webp" width="491" height="722" loading="lazy" alt="Gotova spoljašnost A-frame kuće">
-          <figcaption><b>4. Spolja gotovo.</b> Drvena obloga, tamni limeni krov i nadstrešnica.</figcaption>
+          <div class="slot slot--3x4"><img src="assets/img/proces-gotovo.webp" width="491" height="722" alt="Gotova spoljašnost A-frame kuće" loading="lazy"></div>
+          <figcaption><b>Spolja gotovo.</b> Drvena obloga, tamni limeni krov i nadstrešnica.</figcaption>
         </figure>
       </li>
     </ol>
-    <p class="note"><span class="ph">[POTREBNA INFORMACIJA: koje od ovih faza radi <span translate="no">Wolf&nbsp;Frame</span> i ko radi ploču]</span> <span class="ph">[Video procesa: čeka originalni fajl]</span></p>
+    <p class="note"><span class="ph">[POTREBNA INFORMACIJA: koje od ovih faza radi Wolf Frame i ko radi ploču]</span> <span class="ph">[Video procesa: čeka originalni fajl]</span></p>
   </div>
 </section>
 
-<!-- 6. UNUTRASNJOST -->
-<section class="sec sec--tint" id="unutra">
+<!-- 5. UNUTRAŠNJOST -->
+<section class="sec sec--sand" id="unutra">
   <div class="wrap">
     <h2>Kako izgleda unutra</h2>
-    <p class="sec__intro">Unutrašnjost jednog od naših objekata: drvo na zidovima i plafonu, ugrađena svetla, kuhinja i kupatilo.</p>
-    <div class="gallery">
-      <figure class="g1"><img src="assets/img/unutra-spavaca.webp" width="1000" height="749" loading="lazy" alt="Spavaća soba sa drvenim zidovima i krevetom od greda"><figcaption>Spavaća soba</figcaption></figure>
-      <figure><img src="assets/img/unutra-kuhinja.webp" width="1000" height="749" loading="lazy" alt="Kuhinja sa crnim pločicama i drvenom radnom pločom"><figcaption>Kuhinja</figcaption></figure>
-      <figure><img src="assets/img/unutra-kupatilo.webp" width="1000" height="749" loading="lazy" alt="Kupatilo sa tamnim pločicama i tuš kabinom"><figcaption>Kupatilo</figcaption></figure>
-      <figure><img src="assets/img/unutra-dnevni.webp" width="1000" height="749" loading="lazy" alt="Dnevni boravak sa kaučem i TV-om"><figcaption>Dnevni boravak</figcaption></figure>
-      <figure><img src="assets/img/unutra-trpezarija.webp" width="1000" height="749" loading="lazy" alt="Trpezarija i kutak za sedenje ispod drvenih greda"><figcaption>Trpezarija</figcaption></figure>
+    <p class="lead">Unutrašnjost jednog od naših objekata</p>
+    <div class="gal" role="region" aria-label="Galerija unutrašnjosti" tabindex="0">
+      <figure class="gal__big">
+        <div class="slot"><img src="assets/img/unutra-spavaca.webp" width="1000" height="749" alt="Spavaća soba, drvo na zidovima i plafonu" loading="lazy"></div>
+        <figcaption>Spavaća soba</figcaption>
+      </figure>
+      <figure class="gal__s">
+        <div class="slot"><img src="assets/img/unutra-kuhinja.webp" width="1000" height="749" alt="Kuhinja" loading="lazy"></div>
+        <figcaption>Kuhinja</figcaption>
+      </figure>
+      <figure class="gal__s">
+        <div class="slot"><img src="assets/img/unutra-kupatilo.webp" width="1000" height="749" alt="Kupatilo" loading="lazy"></div>
+        <figcaption>Kupatilo</figcaption>
+      </figure>
+      <figure class="gal__m">
+        <div class="slot"><img src="assets/img/unutra-dnevni.webp" width="1000" height="749" alt="Dnevni boravak" loading="lazy"></div>
+        <figcaption>Dnevni boravak</figcaption>
+      </figure>
+      <figure class="gal__m">
+        <div class="slot"><img src="assets/img/unutra-trpezarija.webp" width="1000" height="749" alt="Trpezarija" loading="lazy"></div>
+        <figcaption>Trpezarija</figcaption>
+      </figure>
     </div>
-    <p class="note">Primer jednog objekta. Šta je u ceni, vidi u tabeli iznad. <span class="ph">[POTREBNA INFORMACIJA: šta od viđenog isporučuje <span translate="no">Wolf&nbsp;Frame</span>]</span></p>
+    <p class="note">Primer jednog objekta. Šta je u ceni, vidi u tabeli iznad. <span class="ph">[POTREBNA INFORMACIJA: šta od viđenog isporučuje Wolf Frame]</span></p>
   </div>
 </section>
 
-<!-- 7. PO MERI -->
-<section class="sec" id="pomeri">
-  <div class="wrap wrap--narrow">
-    <h2>Po meri tvog placa i budžeta</h2>
-    <p>Sve ide po meri. Kažeš nam gde je plac, koliko prostora ti treba i koliki je budžet, a mi predlažemo šta stane.</p>
-    <p>5x7 (35&nbsp;m²) je jedan od objekata koje smo radili. <span class="ph">[POTREBNA INFORMACIJA: druge veličine]</span></p>
-    <p>Pored A-frame kuća radimo i bungalove i brvnare, po upitu.</p>
+<!-- 6. INSTAGRAM -->
+<section class="sec sec--dark" id="pomeri">
+  <div class="wrap ig">
+    <div class="ig__txt">
+      <p class="ig__handle">@wolf.framevikendice</p>
+      <h2>Još slika naših radova na Instagramu</h2>
+      <p class="lead">Gotovi objekti, faze izrade i unutrašnjost. Pogledaj šta <br class="br-desk">smo sve gradili i kako izgleda posao od skeleta do ključa.</p>
+    </div>
+    <a class="btn btn--primary btn--lg" href="https://www.instagram.com/wolf.framevikendice/" rel="noopener" target="_blank">Pogledaj Instagram <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
-<!-- 8. KUPCI -->
-<section class="sec sec--tint" id="kupci">
+<!-- 7. KUPCI -->
+<section class="sec sec--sand" id="kupci">
   <div class="wrap">
-    <h2>Šta kažu ljudi koji su već gradili sa nama</h2>
+    <h2>Šta kažu naše mušterije.</h2>
     <div class="quotes">
       <blockquote>
         „Slike govore sve, izrada vrhunska… ko želi da gradi, neka dođe… u moj komšiluk i uveri se.“
         <cite>kupac <span class="ph">[MESTO, uz dozvolu]</span></cite>
       </blockquote>
-      <blockquote lang="sr-Cyrl">
-        „Браво за најбоље мајсторе и много добре људе хвала на сарадњи“
+      <blockquote>
+        „Bravo za najbolje majstore i mnogo dobre ljude, hvala na saradnji.“
         <cite>kupac <span class="ph">[MESTO, uz dozvolu]</span></cite>
       </blockquote>
-      <div class="quote-ph"><span class="ph">[Fotografija objekta iz vazduha, od kupca: čeka originalni fajl i saglasnost]</span></div>
+      <div class="quotes__ph"><span class="ph">[Fotografija objekta iz vazduha, od kupca: čeka originalni fajl i saglasnost]</span></div>
     </div>
-    <p class="note">Komentari sa naših objava na Facebooku. <span class="ph">[Saglasnost kupaca potvrditi pre objave]</span></p>
   </div>
 </section>
 
-<!-- 9. POSLE UPITA -->
-<section class="sec" id="koraci">
+<!-- 8. FAQ -->
+<section class="sec" id="faq">
   <div class="wrap">
-    <h2>Šta se dešava kad pošalješ upit</h2>
-    <ol class="flow">
-      <li><b>Pošalješ upit.</b> Mesto placa, približna kvadratura i budžet. Traje minut.</li>
-      <li><b>Javljamo ti se.</b> Neko iz tima zove <span class="ph">[ROK ODGOVORA]</span> da se dogovorite oko detalja.</li>
-      <li><b>Dobijaš okvirnu cenu i savet</b> šta stane na tvoj plac. Bez obaveze.</li>
-    </ol>
+    <h2>Ljudi nas često pitaju?</h2>
+    <div class="faq">
+      <div>
+        <details>
+          <summary>Koliko košta A-frame vikendica?</summary>
+          <p>Okvir vidiš u tabeli iznad: <span class="ph">[CENA]</span>. Konačnu cenu dobijaš u ponudi za svoj plac.</p>
+        </details>
+        <details>
+          <summary>Šta je u ceni, a šta nije?</summary>
+          <p>Za svaki nivo piše u tabeli. <span class="ph">[POTREBNA INFORMACIJA]</span></p>
+        </details>
+        <details>
+          <summary>Koje veličine radite?</summary>
+          <p>Sve ide po meri. 5x7 (35&nbsp;m²) je jedan od objekata koje smo radili. <span class="ph">[POTREBNA INFORMACIJA: druge veličine]</span></p>
+        </details>
+        <details>
+          <summary>Gde ste i da li radite u mom kraju?</summary>
+          <p>Iz Kragujevca radimo po celoj Srbiji i u Crnoj Gori. <span class="ph">[Adresa radionice: POTREBNA INFORMACIJA]</span></p>
+        </details>
+      </div>
+      <div>
+        <details>
+          <summary>Kako izgleda proces i koliko traje?</summary>
+          <p>Faze vidiš iznad, na pravom objektu. Rok izrade: <span class="ph">[ROK]</span>.</p>
+        </details>
+        <details>
+          <summary>Šta je sa dozvolama?</summary>
+          <p><span class="ph">[POTREBNA INFORMACIJA: ne objavljivati dok firma i stručno lice ne potvrde]</span></p>
+        </details>
+        <details>
+          <summary>Šta se dešava kad pošaljem upit?</summary>
+          <p>Neko iz tima ti se javlja <span class="ph">[ROK ODGOVORA]</span> da se dogovorite oko detalja, pa dobijaš okvirnu cenu i savet.</p>
+        </details>
+        <a class="faq__call" href="tel:+381642524562">Imate još pitanja? Pozovite nas<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- 10. FAQ -->
-<section class="sec sec--tint" id="faq">
-  <div class="wrap wrap--narrow">
-    <h2>Pitanja koja nam ljudi stvarno postavljaju</h2>
-    <details><summary>Koliko košta A-frame vikendica?</summary>
-      <p>Okvir vidiš u tabeli iznad: <span class="ph">[CENA]</span>. Konačnu cenu dobijaš u ponudi za svoj plac.</p></details>
-    <details><summary>Šta je u ceni, a šta nije?</summary>
-      <p>Za svaki nivo piše u tabeli. <span class="ph">[POTREBNA INFORMACIJA]</span></p></details>
-    <details><summary>Koje veličine radite?</summary>
-      <p>Sve ide po meri. 5x7 (35&nbsp;m²) je jedan od objekata koje smo radili. <span class="ph">[POTREBNA INFORMACIJA: druge veličine]</span></p></details>
-    <details><summary>Gde ste i da li radite u mom kraju?</summary>
-      <p>Iz Kragujevca radimo po celoj Srbiji i u Crnoj Gori. <span class="ph">[Adresa radionice: POTREBNA INFORMACIJA]</span></p></details>
-    <details><summary>Kako izgleda proces i koliko traje?</summary>
-      <p>Faze vidiš iznad, na pravom objektu. Rok izrade: <span class="ph">[ROK]</span>.</p></details>
-    <details><summary>Kako se plaća?</summary>
-      <p>Postoji više načina plaćanja. <span class="ph">[POTREBNA INFORMACIJA: koji]</span></p></details>
-    <details><summary>Šta je sa dozvolama?</summary>
-      <p><span class="ph">[POTREBNA INFORMACIJA: ne objavljivati dok firma i stručno lice ne potvrde]</span></p></details>
-    <details><summary>Šta se dešava kad pošaljem upit?</summary>
-      <p>Neko iz tima ti se javlja <span class="ph">[ROK ODGOVORA]</span> da se dogovorite oko detalja, pa dobijaš okvirnu cenu i savet.</p></details>
-  </div>
-</section>
-
-<!-- 11. FINALNI CTA + FORMA -->
+<!-- 9. UPIT -->
 <section class="sec sec--dark" id="upit">
-  <div class="wrap wrap--narrow">
-    <h2>Pošalji plac i budžet. Javljamo okvirnu cenu.</h2>
-    <p class="sec__intro">Okvirna cena i savet, bez obaveze. Ili pozovi <a class="tel-inline" href="tel:+381642524562">064&nbsp;252&nbsp;45&nbsp;62</a>.</p>
+  <div class="wrap contact">
+    <div class="contact__info">
+      <h2>Pošalji plac i budžet.<br class="br-mob"> Javljamo okvirnu cenu.</h2>
+      <div class="contact__list">
+        <div>
+          <span class="contact__k">Telefon i Viber</span>
+          <span class="contact__v"><a class="contact__tel" href="tel:+381642524562">064&nbsp;252&nbsp;45&nbsp;62</a></span>
+        </div>
+        <div>
+          <span class="contact__k">Instagram</span>
+          <span class="contact__v"><a href="https://www.instagram.com/wolf.framevikendice/" rel="noopener" target="_blank">@wolf.framevikendice</a></span>
+        </div>
+        <div>
+          <span class="contact__k">Facebook</span>
+          <span class="contact__v"><a href="https://www.facebook.com/vuk.bulatovic.418918" rel="noopener" target="_blank">Wolf Frame na Facebooku</a></span>
+        </div>
+        <div>
+          <span class="contact__k">Email</span>
+          <span class="contact__v"><span class="ph">[Email adresa: POTREBNA INFORMACIJA]</span></span>
+        </div>
+        <div>
+          <span class="contact__k">Radionica</span>
+          <span class="contact__v">Kragujevac <span class="ph">[Adresa radionice: POTREBNA INFORMACIJA]</span></span>
+        </div>
+      </div>
+    </div>
 
-    <form id="forma" class="form" novalidate data-endpoint="">
-      <!-- data-endpoint: kad se poveže prijem upita (Formspree, Cloudflare Worker, ...) upiši URL ovde. Dok je prazan, forma samo prikazuje poruku "koncept". -->
-      <div class="field">
-        <label for="ime">Ime</label>
-        <input id="ime" name="ime" type="text" autocomplete="given-name" required aria-describedby="err-ime">
-        <p class="field__err" id="err-ime" hidden></p>
-      </div>
-      <div class="field">
-        <label for="telefon">Telefon</label>
-        <input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" spellcheck="false" placeholder="064 123 4567…" required aria-describedby="err-telefon">
-        <p class="field__err" id="err-telefon" hidden></p>
-      </div>
-      <div class="field">
-        <label for="mesto">Mesto gde je plac</label>
-        <input id="mesto" name="mesto" type="text" autocomplete="address-level2" required aria-describedby="err-mesto">
-        <p class="field__err" id="err-mesto" hidden></p>
-      </div>
-      <div class="field">
-        <label for="kvadratura">Približna kvadratura</label>
-        <select id="kvadratura" name="kvadratura">
-          <option value="">Izaberi</option>
-          <option>Do 30 m²</option>
-          <option>30–45 m²</option>
-          <option>45–70 m²</option>
-          <option>Preko 70 m²</option>
-          <option>Ne znam još</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="budzet">Okvirni budžet</label>
-        <!-- RASPONI su pretpostavka dok firma ne da cene -->
-        <select id="budzet" name="budzet">
-          <option value="">Izaberi</option>
-          <option>Do 20.000 €</option>
-          <option>20.000–35.000 €</option>
-          <option>35.000–50.000 €</option>
-          <option>Preko 50.000 €</option>
-          <option>Još ne znam</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="napomena">Napomena <span class="opt">(nije obavezno)</span></label>
-        <textarea id="napomena" name="napomena" rows="3"></textarea>
-      </div>
-      <div class="hp" aria-hidden="true"><label>Ne popunjavaj <input name="website" tabindex="-1" autocomplete="off"></label></div>
-      <label class="consent">
-        <input type="checkbox" name="saglasnost" required aria-describedby="err-saglasnost">
-        <span>Slažem se da mi se <span translate="no">Wolf&nbsp;Frame</span> javi na ostavljeni broj telefona u vezi okvirne cene. <span class="ph">[Politika privatnosti: POTREBNA INFORMACIJA]</span></span>
-      </label>
-      <p class="field__err" id="err-saglasnost" hidden></p>
-      <button class="btn btn--primary btn--block" type="submit" data-label="Dobij okvirnu cenu">Dobij okvirnu cenu</button>
-      <p class="form__msg" id="forma-msg" role="status" aria-live="polite"></p>
-    </form>
-
-    <p class="ps"><b>P.S.</b> Najveća korist: znaš okvirnu cenu i šta ona obuhvata, pre nego što potrošiš dan na pozive. Pošalji plac, kvadraturu i budžet, ili pozovi 064&nbsp;252&nbsp;45&nbsp;62. Ako ne pitaš, i dalje ćeš porediti cene koje nisu uporedive.</p>
+    <div>
+      <form id="forma" class="form" novalidate data-endpoint="">
+        <!-- data-endpoint: kad se poveže prijem upita (Formspree, Cloudflare Worker, ...) upiši URL ovde. Dok je prazan, forma samo prikazuje poruku "koncept". -->
+        <div class="field">
+          <label for="ime">Ime</label>
+          <input id="ime" name="ime" type="text" autocomplete="given-name" required aria-describedby="err-ime">
+          <p class="field__err" id="err-ime" hidden></p>
+        </div>
+        <div class="field">
+          <label for="telefon">Telefon</label>
+          <input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" spellcheck="false" placeholder="064 123 4567…" required aria-describedby="err-telefon">
+          <p class="field__err" id="err-telefon" hidden></p>
+        </div>
+        <div class="field">
+          <label for="mesto">Mesto gde je plac</label>
+          <input id="mesto" name="mesto" type="text" autocomplete="address-level2" required aria-describedby="err-mesto">
+          <p class="field__err" id="err-mesto" hidden></p>
+        </div>
+        <div class="field">
+          <label for="kvadratura">Približna kvadratura</label>
+          <select id="kvadratura" name="kvadratura">
+            <option value="">Izaberi</option>
+            <option>Do 30 m²</option>
+            <option>30–45 m²</option>
+            <option>45–70 m²</option>
+            <option>Preko 70 m²</option>
+            <option>Ne znam još</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budzet">Okvirni budžet</label>
+          <!-- RASPONI su pretpostavka dok firma ne da cene -->
+          <select id="budzet" name="budzet">
+            <option value="">Izaberi</option>
+            <option>Do 20.000 €</option>
+            <option>20.000–35.000 €</option>
+            <option>35.000–50.000 €</option>
+            <option>Preko 50.000 €</option>
+            <option>Još ne znam</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="napomena">Napomena <span class="opt">(nije obavezno)</span></label>
+          <textarea id="napomena" name="napomena" rows="3"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Ne popunjavaj <input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <label class="consent">
+          <input type="checkbox" name="saglasnost" required aria-describedby="err-saglasnost">
+          <span>Slažem se da mi se <span translate="no">Wolf&nbsp;Frame</span> javi na ostavljeni broj telefona u vezi okvirne cene. <span class="ph">[Politika privatnosti: POTREBNA INFORMACIJA]</span></span>
+        </label>
+        <p class="field__err field__err--consent" id="err-saglasnost" hidden></p>
+        <button class="btn btn--primary btn--block" type="submit" data-label="Pošalji upit">Pošalji upit</button>
+        <p class="form__msg" id="forma-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -315,23 +405,46 @@
 
 <footer class="foot">
   <div class="wrap foot__in">
-    <div>
-      <b translate="no">WOLF FRAME</b><br>Izrada drvenih kuća · Kragujevac<br>
-      <span class="ph">[Pun naziv firme, PIB: POTREBNA INFORMACIJA]</span>
+    <div class="foot__about">
+      <a class="foot__brand" href="#top">
+        <img src="assets/img/logo.webp" width="48" height="48" alt="">
+        <span translate="no"><b>WOLF FRAME</b><small>Izrada drvenih kuća</small></span>
+      </a>
+      <p>A-frame vikendice, bungalovi i brvnare po meri tvog placa. Iz Kragujevca, po celoj Srbiji i u Crnoj Gori.</p>
+      <a class="btn btn--primary btn--sm" href="#upit">Dobij okvirnu cenu</a>
     </div>
-    <div>
-      <a href="tel:+381642524562">064&nbsp;252&nbsp;45&nbsp;62</a><br>
-      <a href="https://www.instagram.com/wolf.framevikendice/" rel="noopener" target="_blank">Instagram</a>
-      · <span class="ph">[Facebook stranica: link]</span><br>
-      <span class="ph">[Politika privatnosti]</span>
+    <nav class="foot__nav" aria-label="Podnožje">
+      <p class="foot__h">Stranica</p>
+      <div>
+        <a href="#cena">Cene</a>
+        <a href="#mehanizam">Gradnja na videlu</a>
+        <a href="#proces">Proces izrade</a>
+        <a href="#unutra">Unutrašnjost</a>
+        <a href="#kupci">Kupci</a>
+        <a href="#faq">Pitanja</a>
+        <a href="#upit">Pošalji upit</a>
+      </div>
+    </nav>
+    <div class="foot__contact">
+      <p class="foot__h">Kontakt</p>
+      <div>
+        <a class="foot__tel" href="tel:+381642524562">064&nbsp;252&nbsp;45&nbsp;62</a>
+        <span class="ph">[Email adresa]</span>
+        <span>Kragujevac <span class="ph">[Adresa radionice]</span></span>
+        <span>Radno vreme: <span class="ph">[POTREBNA INFORMACIJA]</span></span>
+      </div>
+      <p class="foot__h foot__h--follow">Pratite nas</p>
+      <div class="foot__social">
+        <a href="https://www.instagram.com/wolf.framevikendice/" rel="noopener" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/vuk.bulatovic.418918" rel="noopener" target="_blank">Facebook</a>
+      </div>
     </div>
   </div>
+  <div class="foot__legal">
+    <span>© 2026 <span translate="no">Wolf Frame</span> · <span class="ph">[Pun naziv firme, PIB: POTREBNA INFORMACIJA]</span></span>
+    <span><span class="ph">[Politika privatnosti]</span></span>
+  </div>
 </footer>
-
-<div class="stick" id="stick">
-  <a class="btn btn--ghost" href="tel:+381642524562">Pozovi</a>
-  <a class="btn btn--primary" href="#upit">Okvirna cena</a>
-</div>
 
 <script src="js/main.js" defer></script>
 </body>
