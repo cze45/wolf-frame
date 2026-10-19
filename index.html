@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Wolf Frame – A-frame vikendice po meri</title>
-<meta name="description" content="A-frame vikendice po meri tvog placa. Kragujevac, cela Srbija i Crna Gora. Pošalji plac i budžet, javljamo okvirnu cenu i savet.">
-<meta name="theme-color" content="#1f2528">
+<title>Wolf Frame, A-frame vikendice po meri</title>
+<meta name="description" content="A-frame vikendice po meri tvog placa. Kragujevac, cela Srbija i Crna Gora. Izračunaj okvirnu cenu ili pošalji upit.">
+<meta name="theme-color" content="#2f3322">
 <link rel="icon" href="assets/img/logo.webp" type="image/webp">
 <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -14,332 +14,359 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="skip" href="#top">Preskoči na sadržaj</a>
+<div style="font-family: Mulish, system-ui, sans-serif; font-size: 17px; line-height: 1.65; color: #26231b; background: #f6eee0; text-wrap: pretty">
 
-<div class="ribbon" role="note">
-  <strong>Koncept za pregled.</strong> Nije konačna verzija. Žuta polja <span class="ph">[ovako]</span> čekaju podatke od firme.
+<!-- Traka koncepta -->
+<div style="background: #1a1812; color: #ffffff; font: 500 13px/1.4 Montserrat, sans-serif"><div style="max-width: 1080px; margin: 0 auto; padding: 8px 24px; box-sizing: border-box"><strong>Koncept za pregled.</strong> Nije konačna verzija. Polja <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[ovako]</span> čekaju podatke od firme.</div></div>
+
+<!-- Zaglavlje: sticky; providno preko hero dela, tamno posle njega -->
+<header id="nav" style="position: sticky; top: 0; z-index: 50; margin-bottom: -72px; background: transparent; box-shadow: none; transition: background-color 0.25s ease, box-shadow 0.25s ease; color: #ffffff">
+<div style="max-width: 1080px; margin: 0 auto; padding: 14px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px">
+<div style="display: flex; align-items: center; gap: 10px">
+<img src="assets/img/logo.webp" width="44" height="44" alt="Wolf Frame logo" style="border-radius: 6px; object-fit: cover">
+<div style="display: flex; flex-direction: column; line-height: 1.1">
+<b style="font: 800 16px Montserrat, sans-serif; letter-spacing: 0.04em; color: inherit">WOLF FRAME</b>
+<span style="font: 600 10px Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: inherit; opacity: 0.75">Izrada drvenih kuća</span>
+</div>
+</div>
+<nav aria-label="Glavna navigacija" style="display: flex; flex-wrap: wrap; gap: 6px 26px">
+<a href="#radovi" style="font: 600 14px Montserrat, sans-serif; color: inherit; text-decoration: none; transition: color 0.25s ease">Radovi</a>
+<a href="galerija.html" style="font: 600 14px Montserrat, sans-serif; color: inherit; text-decoration: none; transition: color 0.25s ease">Galerija</a>
+<a href="#cena" style="font: 600 14px Montserrat, sans-serif; color: inherit; text-decoration: none; transition: color 0.25s ease">Cena</a>
+<a href="#kupci" style="font: 600 14px Montserrat, sans-serif; color: inherit; text-decoration: none; transition: color 0.25s ease">Kupci</a>
+<a href="#faq" style="font: 600 14px Montserrat, sans-serif; color: inherit; text-decoration: none; transition: color 0.25s ease">Pitanja</a>
+<a href="#kontakt" style="font: 600 14px Montserrat, sans-serif; color: inherit; text-decoration: none; transition: color 0.25s ease">Kontakt</a>
+</nav>
+<a id="nav-tel" aria-label="Pozovi 064 252 45 62" href="tel:+381642524562" aria-hidden="true" tabindex="-1" style="opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s; display: inline-flex; align-items: center; gap: 8px; font: 700 14px Montserrat, sans-serif; text-decoration: none; color: inherit; padding: 9px 14px; border: 1.5px solid rgba(255,255,255,0.7); border-radius: 6px; white-space: nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>064 252 45 62</a>
+</div>
+</header>
+
+<main>
+
+<!-- 1. Hero: fotografija u pozadini, zaglavlje preko nje -->
+<section id="hero" style="position: relative; overflow: hidden; background: #26231b; color: #ffffff; padding: 72px 0 104px; min-height: min(calc(100vh + 40px), 900px); min-height: min(calc(100svh + 40px), 900px); box-sizing: border-box; display: flex; flex-direction: column">
+<img src="assets/img/hero-aframe.webp" srcset="assets/img/hero-aframe-900.webp 900w, assets/img/hero-aframe.webp 1500w" sizes="100vw" width="1500" height="1000" alt="" fetchpriority="high" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 45%; display: block">
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,22,14,0.88) 0%, rgba(26,22,14,0.66) 42%, rgba(26,22,14,0.15) 78%, rgba(26,22,14,0.05) 100%), linear-gradient(180deg, rgba(26,22,14,0.55) 0%, rgba(26,22,14,0) 24%, rgba(26,22,14,0) 62%, rgba(26,22,14,0.6) 100%)"></div>
+
+
+<div style="position: relative; width: 100%; max-width: 1080px; margin: auto; padding: 48px 24px 0; box-sizing: border-box">
+<p style="margin: 0 0 14px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #d9a05b">A-frame vikendice · Kragujevac · Srbija i Crna Gora</p>
+<h1 style="margin: 0 0 16px; max-width: 13em; font: 800 52px/1.04 Montserrat, sans-serif; letter-spacing: -0.03em; text-wrap: balance; color: #ffffff">A-frame vikendica po meri tvog placa.</h1>
+<p style="margin: 0 0 26px; font-size: 19px; color: rgba(255,255,255,0.9)">Cena, izgled i rad na videlu.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px">
+<a href="#kontakt" style="display: inline-flex; align-items: center; gap: 10px; font: 700 16px/1.2 Montserrat, sans-serif; text-decoration: none; padding: 15px 22px; border-radius: 6px; background: #d9a05b; color: #26231b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span>Pošaljite upit</span></a>
+<a href="tel:+381642524562" style="display: inline-flex; align-items: center; gap: 10px; font: 700 16px/1.2 Montserrat, sans-serif; text-decoration: none; padding: 13px 22px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.85); color: #ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg><span>Pozovite nas</span></a>
+</div>
+<blockquote style="margin: 0; padding: 2px 0 2px 14px; border-left: 3px solid #d9a05b; font-style: italic; font-size: 17px; color: rgba(255,255,255,0.92); max-width: 30em">„Slike govore sve, izrada vrhunska.“
+<cite style="display: block; font: 500 13px Montserrat, sans-serif; font-style: normal; color: rgba(255,255,255,0.72); margin-top: 4px">kupac, komentar na Facebooku</cite></blockquote>
+
+</div>
+</section>
+
+<!-- 2. Naši radovi: spolja i unutra zajedno, nepravilan raspored (fotografije su placeholderi) -->
+<section id="radovi" style="background: #f6eee0; padding: 72px 0 104px; position: relative">
+<div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px; margin-bottom: 24px">
+<div style="max-width: 640px">
+<p style="margin: 0 0 12px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #8a5523">Naši radovi</p>
+<h2 style="margin: 0 0 14px; font: 800 34px/1.1 Montserrat, sans-serif; letter-spacing: -0.022em; color: #26231b; text-wrap: balance">Spolja i iznutra, na pravim objektima</h2>
+<p style="margin: 0; font-size: 19px">A-frame oblik, tamni limeni krov i drvena obloga spolja. <br>Drvo na zidovima i plafonu iznutra.</p>
+</div>
+<a href="galerija.html" style="display: inline-flex; align-items: center; gap: 10px; font: 700 15px/1.2 Montserrat, sans-serif; text-decoration: underline; padding: 0px; border-radius: 0px; border: 2px solid #26231b; color: #26231b; white-space: nowrap; border: none none; text-underline-offset: 4px; background-color: transparent; border-style: none" style-hover="color: #8a5523">Pogledaj sve radove ↗</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<figure style="flex: 2 1 440px; position: relative; margin: 0; min-height: 480px; border-radius: 4px; background: #e0d0b6; border: 2px dashed #c9b597; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #74684f; text-align: center; padding: 16px"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 16-5-5-9 9"></path></svg><figcaption style="font: 600 13px/1.4 Montserrat, sans-serif">Fotografija: gotova vikendica na placu, ceo objekat</figcaption></figure>
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 8px">
+<figure style="flex: 1 1 236px; position: relative; margin: 0; min-height: 236px; border-radius: 4px; background: #e9dcc5; border: 2px dashed #cfbe9f; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #857762; text-align: center; padding: 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 16-5-5-9 9"></path></svg><figcaption style="font: 600 13px/1.4 Montserrat, sans-serif">Fotografija: spavaća soba u vrhu krova</figcaption></figure>
+<figure style="flex: 1 1 236px; position: relative; margin: 0; min-height: 236px; border-radius: 4px; background: #e0d0b6; border: 2px dashed #c9b597; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #74684f; text-align: center; padding: 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 16-5-5-9 9"></path></svg><figcaption style="font: 600 13px/1.4 Montserrat, sans-serif">Fotografija: zabat spreda</figcaption></figure>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<figure style="flex: 1.4 1 280px; position: relative; margin: 0; min-height: 320px; border-radius: 4px; background: #e9dcc5; border: 2px dashed #cfbe9f; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #857762; text-align: center; padding: 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 16-5-5-9 9"></path></svg><figcaption style="font: 600 13px/1.4 Montserrat, sans-serif">Fotografija: dnevni boravak</figcaption></figure>
+<figure style="flex: 1 1 220px; position: relative; margin: 0; min-height: 320px; border-radius: 4px; background: #e0d0b6; border: 2px dashed #c9b597; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #74684f; text-align: center; padding: 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 16-5-5-9 9"></path></svg><figcaption style="font: 600 13px/1.4 Montserrat, sans-serif">Fotografija: nadstrešnica ili terasa</figcaption></figure>
+<figure style="flex: 1.4 1 280px; position: relative; margin: 0; min-height: 320px; border-radius: 4px; background: #e9dcc5; border: 2px dashed #cfbe9f; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #857762; text-align: center; padding: 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 16-5-5-9 9"></path></svg><figcaption style="font: 600 13px/1.4 Montserrat, sans-serif">Fotografija: kuhinja</figcaption></figure>
+</div>
+</div>
+<p style="margin: 16px 0 0; font-size: 15px; color: #62584a">Primeri sa naših objekata. Okvirnu cenu izračunaš u kalkulatoru ispod. <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Fotografije: čekaju originale od firme]</span></p>
+</div>
+</section>
+
+<!-- 3. Gradnja na videlu -->
+<section id="mehanizam" data-nav="svetla" style="background: #2f3322; color: #ece3d3; margin-top: -40px; padding: 128px 0 104px; clip-path: polygon(0 40px, 50% 0, 100% 40px, 100% 100%, 0 100%); position: relative">
+<div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<p style="margin: 0 0 12px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #d9a05b">Gradnja na videlu</p>
+<h2 style="margin: 0 0 14px; font: 800 34px/1.1 Montserrat, sans-serif; letter-spacing: -0.022em; color: #ffffff; text-wrap: balance">Sve možeš da proveriš pre prvog poziva</h2>
+<p style="margin: 0 0 48px; font-size: 19px; max-width: 36em">Ne moraš da nam veruješ na reč. <br>Cenu, izgled kuće i naš rad možeš da proveriš sam.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px">
+<div style="flex: 1 1 240px; border-top: 1px solid rgba(236,227,211,0.3); padding-top: 24px">
+<span aria-hidden="true" style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 12px; background: rgba(217,160,91,0.14); border: 1px solid rgba(217,160,91,0.35); color: #d9a05b; margin-bottom: 18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg></span>
+<h3 style="margin: 0 0 8px; font: 700 19px/1.2 Montserrat, sans-serif; color: #ffffff; text-wrap: balance">Pravi objekat, ne render</h3>
+<p style="margin: 0 0 14px">Fotografije su sa naših objekata, ne iz kataloga. Vidiš šta zaista dobijaš.</p>
+<a href="#radovi" style="display: inline-flex; align-items: center; gap: 6px; font: 700 15px Montserrat, sans-serif; color: #d9a05b">Pogledaj radove<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+<div style="flex: 1 1 240px; border-top: 1px solid rgba(236,227,211,0.3); padding-top: 24px">
+<span aria-hidden="true" style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 12px; background: rgba(217,160,91,0.14); border: 1px solid rgba(217,160,91,0.35); color: #d9a05b; margin-bottom: 18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M8 7h8"></path><path d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"></path></svg></span>
+<h3 style="margin: 0 0 8px; font: 700 19px/1.2 Montserrat, sans-serif; color: #ffffff; text-wrap: balance">Cena sa obimom</h3>
+<p style="margin: 0 0 14px">Za svaki nivo piše šta je uključeno, a šta nije. Okvirnu cenu izračunaš sam, pre ponude.</p>
+<a href="#cena" style="display: inline-flex; align-items: center; gap: 6px; font: 700 15px Montserrat, sans-serif; color: #d9a05b">Izračunaj cenu<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+<div style="flex: 1 1 240px; border-top: 1px solid rgba(236,227,211,0.3); padding-top: 24px">
+<span aria-hidden="true" style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 12px; background: rgba(217,160,91,0.14); border: 1px solid rgba(217,160,91,0.35); color: #d9a05b; margin-bottom: 18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="m12 6.2 1.1 2.2 2.4.35-1.75 1.7.4 2.4L12 11.7l-2.15 1.15.4-2.4-1.75-1.7 2.4-.35z"></path></svg></span>
+<h3 style="margin: 0 0 8px; font: 700 19px/1.2 Montserrat, sans-serif; color: #ffffff; text-wrap: balance">Rad koji možeš da proveriš</h3>
+<p style="margin: 0 0 14px">Kupci pišu šta misle o našem radu. <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Obilazak gotovog objekta: POTREBNA INFORMACIJA]</span></p>
+<a href="#kupci" style="display: inline-flex; align-items: center; gap: 6px; font: 700 15px Montserrat, sans-serif; color: #d9a05b"><span>Pročitaj recenzije</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. Cena -->
+<section id="cena" style="background: #ecdfc9; padding: 64px 0">
+<div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<!-- Kalkulator: nivo završnosti + kvadratura = okvirni raspon -->
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px">
+
+<div style="flex: 1.3 1 440px; min-width: 0">
+<div style="margin-bottom: 32px">
+<p style="margin: 0 0 12px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #8a5523">Cena</p>
+<h2 style="margin: 0; font: 800 34px/1.1 Montserrat, sans-serif; letter-spacing: -0.022em; color: #26231b; text-wrap: balance">Koliko košta <span style="white-space: nowrap">A-frame</span> vikendica?</h2>
+</div>
+<p style="margin: 0 0 12px; font: 700 15px Montserrat, sans-serif; color: #26231b">1. Izaberi nivo završnosti</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px">
+<button type="button" aria-pressed="true" data-nivo="siva" style="flex: 1 1 200px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; text-align: left; padding: 20px; border-radius: 8px; border: 2px solid #d9a05b; background: #ffffff; color: #26231b; font: inherit; cursor: pointer">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8a5523" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18h20"></path><path d="M4 18v-3a8 8 0 0 1 16 0v3"></path><path d="M10 7V5h4v2"></path><path d="M12 7v4"></path></svg>
+<b style="font: 800 20px/1.2 Montserrat, sans-serif">Siva faza</b>
+<span style="font: 600 15px Montserrat, sans-serif; color: #62584a">od 320 do 450 €/m²</span>
+</button>
+<button type="button" aria-pressed="false" data-nivo="kljuc" style="flex: 1 1 200px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; text-align: left; padding: 20px; border-radius: 8px; border: 2px solid #cfbe9f; background: transparent; color: #26231b; font: inherit; cursor: pointer">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8a5523" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="m10.7 12.3 9.3-9.3"></path><path d="m16 7 3 3"></path><path d="m14 9 2 2"></path></svg>
+<b style="font: 800 20px/1.2 Montserrat, sans-serif">Ključ u ruke</b>
+<span style="font: 600 15px Montserrat, sans-serif; color: #62584a">od 530 do 690 €/m²</span>
+</button>
 </div>
 
-<main id="top">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px">
+<label for="kvadratura" style="font: 700 15px Montserrat, sans-serif; color: #26231b">2. Koliko kvadrata ti treba?</label>
+<b style="font: 800 26px/1 Montserrat, sans-serif; color: #26231b; font-variant-numeric: tabular-nums"><span data-calc="m2">35</span> m²</b>
+</div>
+<input id="kvadratura" type="range" min="20" max="120" step="5" value="35" style="width: 100%; accent-color: #8a5523; cursor: pointer">
+<div style="display: flex; justify-content: space-between; font: 600 13px Montserrat, sans-serif; color: #62584a; margin-top: 4px"><span>20 m²</span><span>5x7 = 35 m²</span><span>120 m²</span></div>
+</div>
 
-<!-- 1. HERO (fotografija u pozadini, zaglavlje preko nje) -->
-<section class="hero before-roof">
-  <img class="hero__bg" src="assets/img/hero-aframe.webp" srcset="assets/img/hero-aframe-900.webp 900w, assets/img/hero-aframe.webp 1500w" sizes="100vw" width="1500" height="1000" alt="" fetchpriority="high">
-  <header class="top">
-    <div class="wrap top__in">
-      <a class="brand" href="#top" aria-label="Wolf Frame, početak stranice">
-        <img src="assets/img/logo.webp" width="44" height="44" alt="">
-        <span class="brand__txt" translate="no"><b>WOLF FRAME</b><small>Izrada drvenih kuća</small></span>
-      </a>
-      <nav class="nav" aria-label="Glavna navigacija">
-        <a href="#cena">Cena</a>
-        <a href="#proces">Proces</a>
-        <a href="#unutra">Unutrašnjost</a>
-        <a href="#faq">Pitanja</a>
-      </nav>
-      <a class="top__tel" href="tel:+381642524562" aria-label="Pozovi 064 252 45 62"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>064&nbsp;252&nbsp;45&nbsp;62</span></a>
-    </div>
-  </header>
-  <div class="wrap hero__in">
-    <p class="eyebrow">A-frame vikendice · Kragujevac · Srbija i Crna Gora</p>
-    <h1>A-frame vikendica po meri tvog placa.</h1>
-    <p class="lead">Cena i faze gradnje na videlu.</p>
-    <div class="cta-row">
-      <a class="btn btn--primary" href="#upit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Dobij okvirnu cenu za svoj plac</a>
-      <a class="btn btn--ghost" href="tel:+381642524562"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Pozovi 064&nbsp;252&nbsp;45&nbsp;62</a>
-    </div>
-    <blockquote class="hero__quote">
-      „Slike govore sve, izrada vrhunska.“
-      <cite>kupac, komentar na Facebooku</cite>
-    </blockquote>
-  </div>
-  <p class="hero__credit wrap"><span class="ph">[Fotografija: potvrditi da je objekat Wolf Frame i da imamo pravo korišćenja]</span></p>
+<div style="flex: 1 1 320px; min-width: 0; background: #26231b; color: #ece3d3; border-radius: 8px; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<p style="margin: 0; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #d9a05b">Okvirna cena</p>
+<span style="font: 600 13px/1 Montserrat, sans-serif; color: #ece3d3; padding: 7px 10px; border: 1px solid rgba(236,227,211,0.25); border-radius: 999px; white-space: nowrap"><span data-calc="nivoNaziv">Siva faza</span> · <span data-calc="m2">35</span> m²</span>
+</div>
+
+<div aria-live="polite" style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 40px 0">
+<p style="margin: 0; font: 800 40px/1.1 Montserrat, sans-serif; font-size: clamp(24px, 2.7vw, 34px); letter-spacing: -0.03em; color: #ffffff; white-space: nowrap; font-variant-numeric: tabular-nums"><span data-calc="cenaOd">11.200</span> – <span data-calc="cenaDo">15.800</span>&nbsp;€</p>
+<p style="margin: 10px 0 0; font: 600 14px Montserrat, sans-serif; color: rgba(236,227,211,0.7)"><span data-calc="cenaM2">320–450</span> €/m² × <span data-calc="m2">35</span> m²</p>
+</div>
+
+<div style="border-top: 1px solid rgba(236,227,211,0.18); padding-top: 20px; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(236,227,211,0.85)">Konačna cena zavisi od placa, pristupa i temelja. Tačan iznos dobijaš u ponudi.</p>
+<a href="#kontakt" style="display: flex; align-items: center; justify-content: center; gap: 10px; font: 700 16px/1.2 Montserrat, sans-serif; text-decoration: none; padding: 16px 22px; border-radius: 6px; background: #d9a05b; color: #26231b">Pošalji upit za svoj plac<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+
+</div>
+<p style="margin: 16px 0 0; font-size: 15px; color: #62584a"><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Cene po m² su primer iz reference: zameniti cenama Wolf Frame u js/main.js]</span></p>
+</div>
 </section>
 
-<!-- 2. CENA ODMAH -->
-<section class="sec sec--tint roof" id="cena">
-  <div class="wrap">
-    <p class="kicker">Cena</p>
-    <h2>Koliko košta A-frame vikendica?</h2>
-    <div class="tbl-wrap">
-      <table class="price">
-        <thead>
-          <tr><th>Nivo</th><th>Šta je uključeno</th><th>Šta nije uključeno</th><th>Cena</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th data-l="Nivo">Nivo A <span class="ph">[naziv]</span></th>
-            <td data-l="Šta je uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Šta nije uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Cena"><span class="ph">[CENA]</span></td>
-          </tr>
-          <tr>
-            <th data-l="Nivo">Nivo B <span class="ph">[naziv]</span></th>
-            <td data-l="Šta je uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Šta nije uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Cena"><span class="ph">[CENA]</span></td>
-          </tr>
-          <tr>
-            <th data-l="Nivo">Nivo C <span class="ph">[naziv]</span></th>
-            <td data-l="Šta je uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Šta nije uključeno"><span class="ph">[POTREBNA INFORMACIJA]</span></td>
-            <td data-l="Cena"><span class="ph">[CENA]</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Primer: A-frame 5x7 (35&nbsp;m²), <span class="ph">[nivo]</span>: <span class="ph">[CENA]</span>. Okvirna cena za tvoj plac je besplatna <span class="ph">[potvrditi]</span>.</p>
-    <p><a class="btn btn--primary" href="#upit">Dobij okvirnu cenu za svoj plac</a></p>
-  </div>
+
+
+<!-- 8. Kupci -->
+<section id="kupci" style="background: #f6eee0; padding: 64px 0">
+<div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<p style="margin: 0 0 12px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #8a5523">Kupci</p>
+<h2 style="margin: 0 0 20px; font: 800 34px/1.1 Montserrat, sans-serif; letter-spacing: -0.022em; color: #26231b; text-wrap: balance">Šta kažu ljudi koji su gradili sa nama</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 0 32px">
+<blockquote style="flex: 1 1 280px; margin: 0; padding: 22px 0; border-top: 2px solid #26231b; font-style: italic; font-size: 19px; line-height: 1.5">„Slike govore sve, izrada vrhunska… ko želi da gradi, neka dođe… u moj komšiluk i uveri se.“
+<cite style="display: block; font: 500 13px Montserrat, sans-serif; font-style: normal; color: #62584a; margin-top: 10px">kupac <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[MESTO, uz dozvolu]</span></cite></blockquote>
+<blockquote style="flex: 1 1 280px; margin: 0; padding: 22px 0; border-top: 2px solid #26231b; font-style: italic; font-size: 19px; line-height: 1.5">„Bravo za najbolje majstore i mnogo dobre ljude, hvala na saradnji.“
+<cite style="display: block; font: 500 13px Montserrat, sans-serif; font-style: normal; color: #62584a; margin-top: 10px">kupac <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[MESTO, uz dozvolu]</span></cite></blockquote>
+<div style="flex: 1 1 280px; align-self: flex-start; margin-top: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 18px; border-radius: 4px; border: 2px dashed #cfbe9f; background: #e9dcc5; color: #857762; min-height: 160px; box-sizing: border-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 16-5-5-9 9"></path></svg><span style="font: 600 13px/1.4 Montserrat, sans-serif">Fotografija: objekat kupca iz vazduha</span></div>
+</div>
+<p style="margin: 16px 0 0; font-size: 15px; color: #62584a">Komentari sa naših objava na Facebooku. <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Saglasnost kupaca potvrditi pre objave]</span></p>
+</div>
 </section>
 
-<!-- 3. PROBLEM -->
-<section class="sec before-roof" id="problem">
-  <div class="wrap wrap--narrow">
-    <h2>Cena bez obima ne znači ništa</h2>
-    <p>Pitaš „Cena?“ i dobiješ broj.</p>
-    <p>Kod jednih je to siva faza po kvadratu. Kod drugih ključ u ruke. Kod trećih komplet koji montiraš sam.</p>
-    <p><strong>Tri broja, tri različite stvari.</strong></p>
-    <p>Zato odmah pitaš: dal je ključ u ruke? Da li je temelj u ceni? Šta znači siva gradnja?</p>
-    <p>Odgovore obično moraš da tražiš po komentarima, u inboxu, preko telefona.</p>
-    <p class="turn">Kod nas je drugačije.</p>
-  </div>
-</section>
+<!-- 9. Koraci -->
 
-<!-- 4. MEHANIZAM -->
-<section class="sec sec--dark sec--forest roof" id="mehanizam">
-  <div class="wrap">
-    <p class="kicker">Gradnja na videlu</p>
-    <h2>Gradnja na videlu: sve možeš da proveriš pre prvog poziva</h2>
-    <p class="sec__intro">Ne moraš da nam veruješ na reč.<br>Cenu, proces i naš rad možeš da proveriš sam.</p>
-    <ol class="cards">
-      <li class="card">
-        <h3>Cena sa obimom</h3>
-        <p>Za svaki nivo piše šta je uključeno, a šta nije. Vidiš to u tabeli, pre ponude.</p>
-        <a href="#cena">Pogledaj tabelu</a>
-      </li>
-      <li class="card">
-        <h3>Proces na pravom objektu</h3>
-        <p>Pokazujemo faze izrade: skelet, krov, obloga, unutrašnjost. Vidiš kako izgleda posao, a ne samo gotovu sliku.</p>
-        <a href="#proces">Pogledaj faze</a>
-      </li>
-      <li class="card">
-        <h3>Rad koji možeš da proveriš</h3>
-        <p>Kupci pišu šta misle o našem radu. <span class="ph">[Obilazak gotovog objekta: POTREBNA INFORMACIJA]</span></p>
-        <a href="#kupci">Pročitaj kupce</a>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- 5. PROCES -->
-<section class="sec" id="proces">
-  <div class="wrap">
-    <p class="kicker">Proces</p>
-    <h2>Ovako nastaje A-frame vikendica</h2>
-    <p class="sec__intro">Faze izrade na jednom od naših objekata (5x7, 35&nbsp;m²).</p>
-    <ol class="steps" tabindex="0" role="group" aria-label="Faze izrade, listaj udesno">
-      <li>
-        <figure>
-          <img src="assets/img/proces-skelet.webp" width="490" height="562" loading="lazy" alt="Drveni A-frame skelet na betonskoj ploči">
-          <figcaption><b>1. Skelet.</b> Drvena A-frame konstrukcija na pripremljenoj ploči.</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <img src="assets/img/proces-krov.webp" width="490" height="743" loading="lazy" alt="Krov A-frame kuće prekriven reflektujućom folijom">
-          <figcaption><b>2. Krov.</b> Krov dobija foliju.</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <img src="assets/img/proces-podloga.webp" width="494" height="753" loading="lazy" alt="Radnik na krovu A-frame kuće, tamna krovna podloga">
-          <figcaption><b>3. Podloga.</b> Postavlja se tamna krovna podloga.</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <img src="assets/img/proces-gotovo.webp" width="491" height="722" loading="lazy" alt="Gotova spoljašnost A-frame kuće">
-          <figcaption><b>4. Spolja gotovo.</b> Drvena obloga, tamni limeni krov i nadstrešnica.</figcaption>
-        </figure>
-      </li>
-    </ol>
-    <p class="note"><span class="ph">[POTREBNA INFORMACIJA: koje od ovih faza radi <span translate="no">Wolf&nbsp;Frame</span> i ko radi ploču]</span> <span class="ph">[Video procesa: čeka originalni fajl]</span></p>
-  </div>
-</section>
-
-<!-- 6. UNUTRASNJOST -->
-<section class="sec sec--tint" id="unutra">
-  <div class="wrap">
-    <p class="kicker">Enterijer</p>
-    <h2>Kako izgleda unutra</h2>
-    <p class="sec__intro">Unutrašnjost jednog od naših objekata: drvo na zidovima i plafonu, ugrađena svetla, kuhinja i kupatilo.</p>
-    <div class="gallery">
-      <figure class="g1"><img src="assets/img/unutra-spavaca.webp" width="1000" height="749" loading="lazy" alt="Spavaća soba sa drvenim zidovima i krevetom od greda"><figcaption>Spavaća soba</figcaption></figure>
-      <figure><img src="assets/img/unutra-kuhinja.webp" width="1000" height="749" loading="lazy" alt="Kuhinja sa crnim pločicama i drvenom radnom pločom"><figcaption>Kuhinja</figcaption></figure>
-      <figure><img src="assets/img/unutra-kupatilo.webp" width="1000" height="749" loading="lazy" alt="Kupatilo sa tamnim pločicama i tuš kabinom"><figcaption>Kupatilo</figcaption></figure>
-      <figure><img src="assets/img/unutra-dnevni.webp" width="1000" height="749" loading="lazy" alt="Dnevni boravak sa kaučem i TV-om"><figcaption>Dnevni boravak</figcaption></figure>
-      <figure><img src="assets/img/unutra-trpezarija.webp" width="1000" height="749" loading="lazy" alt="Trpezarija i kutak za sedenje ispod drvenih greda"><figcaption>Trpezarija</figcaption></figure>
-    </div>
-    <p class="note">Primer jednog objekta. Šta je u ceni, vidi u tabeli iznad. <span class="ph">[POTREBNA INFORMACIJA: šta od viđenog isporučuje <span translate="no">Wolf&nbsp;Frame</span>]</span></p>
-  </div>
-</section>
-
-<!-- 7. PO MERI -->
-<section class="sec" id="pomeri">
-  <div class="wrap wrap--narrow">
-    <p class="kicker">Po meri</p>
-    <h2>Po meri tvog placa i budžeta</h2>
-    <p>Sve ide po meri. Kažeš nam gde je plac, koliko prostora ti treba i koliki je budžet, a mi predlažemo šta stane.</p>
-    <p>5x7 (35&nbsp;m²) je jedan od objekata koje smo radili. <span class="ph">[POTREBNA INFORMACIJA: druge veličine]</span></p>
-    <p>Pored A-frame kuća radimo i bungalove i brvnare, po upitu.</p>
-  </div>
-</section>
-
-<!-- 8. KUPCI -->
-<section class="sec sec--tint" id="kupci">
-  <div class="wrap">
-    <p class="kicker">Kupci</p>
-    <h2>Šta kažu ljudi koji su već gradili sa nama</h2>
-    <div class="quotes">
-      <blockquote>
-        „Slike govore sve, izrada vrhunska… ko želi da gradi, neka dođe… u moj komšiluk i uveri se.“
-        <cite>kupac <span class="ph">[MESTO, uz dozvolu]</span></cite>
-      </blockquote>
-      <blockquote lang="sr-Cyrl">
-        „Браво за најбоље мајсторе и много добре људе хвала на сарадњи“
-        <cite>kupac <span class="ph">[MESTO, uz dozvolu]</span></cite>
-      </blockquote>
-      <div class="quote-ph"><span class="ph">[Fotografija objekta iz vazduha, od kupca: čeka originalni fajl i saglasnost]</span></div>
-    </div>
-    <p class="note">Komentari sa naših objava na Facebooku. <span class="ph">[Saglasnost kupaca potvrditi pre objave]</span></p>
-  </div>
-</section>
-
-<!-- 9. POSLE UPITA -->
-<section class="sec" id="koraci">
-  <div class="wrap">
-    <p class="kicker">Sledeći korak</p>
-    <h2>Šta se dešava kad pošalješ upit</h2>
-    <ol class="flow">
-      <li><b>Pošalješ upit.</b> Mesto placa, približna kvadratura i budžet. Traje minut.</li>
-      <li><b>Javljamo ti se.</b> Neko iz tima zove <span class="ph">[ROK ODGOVORA]</span> da se dogovorite oko detalja.</li>
-      <li><b>Dobijaš okvirnu cenu i savet</b> šta stane na tvoj plac. Bez obaveze.</li>
-    </ol>
-  </div>
-</section>
 
 <!-- 10. FAQ -->
-<section class="sec sec--tint" id="faq">
-  <div class="wrap wrap--narrow">
-    <p class="kicker">Pitanja</p>
-    <h2>Pitanja koja nam ljudi stvarno postavljaju</h2>
-    <details><summary>Koliko košta A-frame vikendica?</summary>
-      <p>Okvir vidiš u tabeli iznad: <span class="ph">[CENA]</span>. Konačnu cenu dobijaš u ponudi za svoj plac.</p></details>
-    <details><summary>Šta je u ceni, a šta nije?</summary>
-      <p>Za svaki nivo piše u tabeli. <span class="ph">[POTREBNA INFORMACIJA]</span></p></details>
-    <details><summary>Koje veličine radite?</summary>
-      <p>Sve ide po meri. 5x7 (35&nbsp;m²) je jedan od objekata koje smo radili. <span class="ph">[POTREBNA INFORMACIJA: druge veličine]</span></p></details>
-    <details><summary>Gde ste i da li radite u mom kraju?</summary>
-      <p>Iz Kragujevca radimo po celoj Srbiji i u Crnoj Gori. <span class="ph">[Adresa radionice: POTREBNA INFORMACIJA]</span></p></details>
-    <details><summary>Kako izgleda proces i koliko traje?</summary>
-      <p>Faze vidiš iznad, na pravom objektu. Rok izrade: <span class="ph">[ROK]</span>.</p></details>
-    <details><summary>Kako se plaća?</summary>
-      <p>Postoji više načina plaćanja. <span class="ph">[POTREBNA INFORMACIJA: koji]</span></p></details>
-    <details><summary>Šta je sa dozvolama?</summary>
-      <p><span class="ph">[POTREBNA INFORMACIJA: ne objavljivati dok firma i stručno lice ne potvrde]</span></p></details>
-    <details><summary>Šta se dešava kad pošaljem upit?</summary>
-      <p>Neko iz tima ti se javlja <span class="ph">[ROK ODGOVORA]</span> da se dogovorite oko detalja, pa dobijaš okvirnu cenu i savet.</p></details>
-  </div>
+<section id="faq" style="background: #ecdfc9; padding: 64px 0">
+<div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 700px">
+<p style="margin: 0 0 12px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #8a5523">Pitanja</p>
+<h2 style="margin: 0 0 20px; font: 800 34px/1.1 Montserrat, sans-serif; letter-spacing: -0.022em; color: #26231b; text-wrap: balance">Česta pitanja</h2>
+</div>
+<!-- Dve kolone po 5 stavki; na telefonu jedna ispod druge -->
+<div style="display: flex; flex-wrap: wrap; gap: 0 40px">
+<div style="flex: 1 1 320px; min-width: 0">
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Koliko košta A-frame vikendica?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Okvirnu cenu izračunaš sam u <a href="#cena" style="color: #8a5523; font-weight: 700">kalkulatoru iznad</a>: izabereš sivu fazu ili ključ u ruke i kvadraturu. Konačna cena zavisi od placa, pristupa i temelja, i dobijaš je u ponudi.</p>
+</details>
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Šta je u ceni, a šta nije?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Radimo dva nivoa: sivu fazu i ključ u ruke. Šta tačno ulazi u svaki: <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[POTREBNA INFORMACIJA]</span>. Plac, pristup i temelj utiču na cenu i ulaze u ponudu.</p>
+</details>
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Koje veličine radite?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Sve ide po meri, a primer je A-frame 5x7 (35&nbsp;m²). Gotove objekte vidiš u <a href="galerija.html" style="color: #8a5523; font-weight: 700">galeriji radova</a>. <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[POTREBNA INFORMACIJA: druge veličine]</span></p>
+</details>
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Da li radite bungalove i brvnare?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Da. Pored A-frame kuća radimo i bungalove i brvnare, po upitu.</p>
+</details>
+<details style="border-top: 1px solid #cfbe9f; border-bottom: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Gde ste i da li radite u mom kraju?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Iz Kragujevca radimo po celoj Srbiji i u Crnoj Gori. <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Adresa radionice: POTREBNA INFORMACIJA]</span></p>
+</details>
+</div>
+<div style="flex: 1 1 320px; min-width: 0">
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Kako izgleda proces i koliko traje?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Korake i rok dogovaramo u razgovoru, za tvoj plac. Rok izrade: <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[ROK]</span>.</p>
+</details>
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Kako se plaća?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Postoji više načina plaćanja. <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[POTREBNA INFORMACIJA: koji]</span></p>
+</details>
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Šta je sa dozvolama?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px"><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[POTREBNA INFORMACIJA: ne objavljivati dok firma i stručno lice ne potvrde]</span></p>
+</details>
+<details style="border-top: 1px solid #cfbe9f">
+<summary style="cursor: pointer; font: 700 16px/1.35 Montserrat, sans-serif; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px"><span>Šta se dešava kad pošaljem upit?</span><span style="font-size: 22px; line-height: 1; color: #8a5523">+</span></summary>
+<p style="margin: 0; padding: 0 0 16px">Pošalji upit preko <a href="#kontakt" style="color: #8a5523; font-weight: 700">forme</a> ili pozovi 064&nbsp;252&nbsp;45&nbsp;62. Javljamo ti se <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[ROK ODGOVORA]</span> sa okvirnom cenom i savetom, bez obaveze.</p>
+</details>
+<a href="tel:+381642524562" style="display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 0; border-top: 1px solid #cfbe9f; border-bottom: 1px solid #cfbe9f; text-decoration: none; color: #26231b; font: 700 16px/1.35 Montserrat, sans-serif"><span>Imate još pitanja? Pozovite nas</span><span style="display: inline-flex; align-items: center; gap: 8px; color: #8a5523; white-space: nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>064 252 45 62</span></a>
+</div>
+</div>
+</div>
 </section>
 
-<!-- 11. FINALNI CTA + FORMA -->
-<section class="sec sec--dark" id="upit">
-  <div class="wrap wrap--narrow">
-    <p class="kicker">Okvirna cena</p>
-    <h2>Pošalji plac i budžet. Javljamo okvirnu cenu.</h2>
-    <p class="sec__intro">Okvirna cena i savet, bez obaveze. Ili pozovi <a class="tel-inline" href="tel:+381642524562">064&nbsp;252&nbsp;45&nbsp;62</a>.</p>
+<!-- 11. Kontakt: podaci levo, upit desno -->
+<section id="kontakt" style="background: #f6eee0; padding: 72px 0">
+<div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: stretch; gap: 40px 56px">
 
-    <form id="forma" class="form" novalidate data-endpoint="">
-      <!-- data-endpoint: kad se poveže prijem upita (Formspree, Cloudflare Worker, ...) upiši URL ovde. Dok je prazan, forma samo prikazuje poruku "koncept". -->
-      <div class="field">
-        <label for="ime">Ime</label>
-        <input id="ime" name="ime" type="text" autocomplete="given-name" required aria-describedby="err-ime">
-        <p class="field__err" id="err-ime" hidden></p>
-      </div>
-      <div class="field">
-        <label for="telefon">Telefon</label>
-        <input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" spellcheck="false" placeholder="064 123 4567…" required aria-describedby="err-telefon">
-        <p class="field__err" id="err-telefon" hidden></p>
-      </div>
-      <div class="field">
-        <label for="mesto">Mesto gde je plac</label>
-        <input id="mesto" name="mesto" type="text" autocomplete="address-level2" required aria-describedby="err-mesto">
-        <p class="field__err" id="err-mesto" hidden></p>
-      </div>
-      <div class="field">
-        <label for="kvadratura">Približna kvadratura</label>
-        <select id="kvadratura" name="kvadratura">
-          <option value="">Izaberi</option>
-          <option>Do 30 m²</option>
-          <option>30–45 m²</option>
-          <option>45–70 m²</option>
-          <option>Preko 70 m²</option>
-          <option>Ne znam još</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="budzet">Okvirni budžet</label>
-        <!-- RASPONI su pretpostavka dok firma ne da cene -->
-        <select id="budzet" name="budzet">
-          <option value="">Izaberi</option>
-          <option>Do 20.000 €</option>
-          <option>20.000–35.000 €</option>
-          <option>35.000–50.000 €</option>
-          <option>Preko 50.000 €</option>
-          <option>Još ne znam</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="napomena">Napomena <span class="opt">(nije obavezno)</span></label>
-        <textarea id="napomena" name="napomena" rows="3"></textarea>
-      </div>
-      <div class="hp" aria-hidden="true"><label>Ne popunjavaj <input name="website" tabindex="-1" autocomplete="off"></label></div>
-      <label class="consent">
-        <input type="checkbox" name="saglasnost" required aria-describedby="err-saglasnost">
-        <span>Slažem se da mi se <span translate="no">Wolf&nbsp;Frame</span> javi na ostavljeni broj telefona u vezi okvirne cene. <span class="ph">[Politika privatnosti: POTREBNA INFORMACIJA]</span></span>
-      </label>
-      <p class="field__err" id="err-saglasnost" hidden></p>
-      <button class="btn btn--primary btn--block" type="submit" data-label="Dobij okvirnu cenu">Dobij okvirnu cenu</button>
-      <p class="form__msg" id="forma-msg" role="status" aria-live="polite"></p>
-    </form>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start">
+<p style="margin: 0 0 12px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #8a5523">Kontakt</p>
+<h2 style="margin: 0 0 14px; font: 800 34px/1.1 Montserrat, sans-serif; letter-spacing: -0.022em; color: #26231b; text-wrap: balance">Pozovi ili pošalji upit</h2>
+<p style="margin: 0 0 22px; max-width: 30em; color: #62584a">Najbrže je da pozoveš. Ako ti je lakše da pišeš, opiši plac i šta želiš, a mi ti javljamo okvirnu cenu.</p>
+<a href="tel:+381642524562" style="display: inline-block; margin-bottom: 18px; font: 800 40px/1.1 Montserrat, sans-serif; letter-spacing: -0.02em; color: #26231b; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px">064 252 45 62</a>
+<div style="align-self: stretch">
 
-    <p class="ps"><b>P.S.</b> Najveća korist: znaš okvirnu cenu i šta ona obuhvata, pre nego što potrošiš dan na pozive. Pošalji plac, kvadraturu i budžet, ili pozovi 064&nbsp;252&nbsp;45&nbsp;62. Ako ne pitaš, i dalje ćeš porediti cene koje nisu uporedive.</p>
-  </div>
+<div style="display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid #dccbb0">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #d9a05b; color: #8a5523; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"></path></svg></span>
+<div><div style="font: 600 12px Montserrat, sans-serif; color: #62584a">Viber i WhatsApp</div><div style="font: 700 16px Montserrat, sans-serif; color: #26231b"><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[POTREBNA INFORMACIJA: da li je isti broj]</span></div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid #dccbb0">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #d9a05b; color: #8a5523; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span>
+<div><div style="font: 600 12px Montserrat, sans-serif; color: #62584a">E-pošta</div><div style="font: 700 16px Montserrat, sans-serif; color: #26231b"><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[POTREBNA INFORMACIJA]</span></div></div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid #dccbb0">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #d9a05b; color: #8a5523; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span>
+<div><div style="font: 600 12px Montserrat, sans-serif; color: #62584a">Područje rada</div><div style="font: 700 16px Montserrat, sans-serif; color: #26231b">Cela Srbija i Crna Gora</div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid #dccbb0">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #d9a05b; color: #8a5523; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+<div><div style="font: 600 12px Montserrat, sans-serif; color: #62584a">Radno vreme</div><div style="font: 700 16px Montserrat, sans-serif; color: #26231b"><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[POTREBNA INFORMACIJA]</span></div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid #dccbb0; border-bottom: 1px solid #dccbb0">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #d9a05b; color: #8a5523; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"></path></svg></span>
+<div><div style="font: 600 12px Montserrat, sans-serif; color: #62584a; margin-bottom: 6px">Društvene mreže</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<a href="https://www.instagram.com/wolf.framevikendice/" style="display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid #dccbb0; border-radius: 6px; background: #ffffff; font: 700 14px Montserrat, sans-serif; color: #26231b; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5"></circle></svg>Instagram</a>
+<a href="https://www.facebook.com/vuk.bulatovic.418918/" style="display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid #dccbb0; border-radius: 6px; background: #ffffff; font: 700 14px Montserrat, sans-serif; color: #26231b; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"></path></svg>Facebook</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="flex: 1 1 380px; min-width: 0; background: #ffffff; border: 1px solid #dccbb0; border-radius: 8px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column">
+<!-- Forma prati visinu leve kolone: polje za opis se širi ili skuplja -->
+<h3 style="margin: 0 0 6px; font: 800 22px/1.2 Montserrat, sans-serif; color: #26231b">Pošalji upit</h3>
+<p style="margin: 0 0 20px; font-size: 15px; color: #62584a">Javljamo ti se sa okvirnom cenom i savetom, bez obaveze.</p>
+<form id="forma" data-endpoint="" novalidate style="flex: 1; display: flex; flex-direction: column; gap: 14px; margin: 0">
+<div><label for="ime" style="display: block; font: 700 14px Montserrat, sans-serif; color: #26231b; margin-bottom: 6px">Ime</label><input id="ime" name="ime" type="text" required autocomplete="given-name" placeholder="Npr. Marko Petrović…" style="width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; color: #26231b; padding: 13px 12px; border-radius: 6px; border: 1px solid #cfbe9f; background: #ffffff"></div>
+<div><label for="telefon" style="display: block; font: 700 14px Montserrat, sans-serif; color: #26231b; margin-bottom: 6px">Telefon</label><input id="telefon" name="telefon" type="tel" required inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx…" style="width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; color: #26231b; padding: 13px 12px; border-radius: 6px; border: 1px solid #cfbe9f; background: #ffffff"></div>
+<div style="flex: 1; display: flex; flex-direction: column"><label for="opis" style="display: block; font: 700 14px Montserrat, sans-serif; color: #26231b; margin-bottom: 6px">Opiši šta želiš da gradiš</label><textarea id="opis" name="opis" rows="3" placeholder="Gde je plac, koliko kvadrata ti treba, okvirni budžet, kada planiraš gradnju i da li želiš siva faza ili ključ u ruke…" style="width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; color: #26231b; padding: 13px 12px; border-radius: 6px; border: 1px solid #cfbe9f; background: #ffffff; resize: vertical; flex: 1; min-height: 96px"></textarea></div>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #62584a"><input type="checkbox" name="saglasnost" required style="margin-top: 3px; width: 20px; height: 20px; flex: none"><span>Slažem se da mi se Wolf Frame javi na ostavljeni broj povodom upita. <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Politika privatnosti]</span></span></label>
+<p id="forma-msg" role="status" aria-live="polite" hidden style="margin: 0; padding: 10px 12px; border-radius: 6px; background: #f6eee0; border: 1px solid #cfbe9f; font-size: 15px; color: #26231b"></p>
+<button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; font: 700 16px/1.2 Montserrat, sans-serif; padding: 15px 22px; border-radius: 6px; border: 2px solid transparent; background: #d9a05b; color: #26231b; cursor: pointer">Pošalji upit</button>
+<p style="margin: 0; font-size: 13px; color: #62584a">Broj koristimo samo da te pozovemo povodom upita.</p>
+</form>
+</div>
+
+</div>
 </section>
 
 </main>
 
-<footer class="foot">
-  <div class="wrap foot__in">
-    <div>
-      <b translate="no">WOLF FRAME</b><br>Izrada drvenih kuća · Kragujevac<br>
-      <span class="ph">[Pun naziv firme, PIB: POTREBNA INFORMACIJA]</span>
-    </div>
-    <div>
-      <a href="tel:+381642524562">064&nbsp;252&nbsp;45&nbsp;62</a><br>
-      <a href="https://www.instagram.com/wolf.framevikendice/" rel="noopener" target="_blank">Instagram</a>
-      · <span class="ph">[Facebook stranica: link]</span><br>
-      <span class="ph">[Politika privatnosti]</span>
-    </div>
-  </div>
-</footer>
+<!-- Podnožje -->
+<footer data-nav="svetla" style="color: #d1c6b2; padding: 64px 0 0; font-size: 15px; line-height: 1.6; background-color: #2f3322">
+<div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px 48px">
 
-<div class="stick" id="stick">
-  <a class="btn btn--ghost" href="tel:+381642524562">Pozovi</a>
-  <a class="btn btn--primary" href="#upit">Okvirna cena</a>
+<div style="flex: 1.6 1 280px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px">
+<img src="assets/img/logo.webp" width="44" height="44" alt="Wolf Frame logo" style="border-radius: 6px; object-fit: cover">
+<div style="display: flex; flex-direction: column; line-height: 1.1">
+<b style="font: 800 16px Montserrat, sans-serif; letter-spacing: 0.04em; color: #ffffff">WOLF FRAME</b>
+<span style="font: 600 10px Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.65)">Izrada drvenih kuća</span>
+</div>
+</div>
+<p style="margin: 0 0 20px; max-width: 24em">A-frame vikendice, bungalovi i brvnare po meri. Iz Kragujevca, za celu Srbiju i Crnu Goru.</p>
+<a href="#kontakt" style="display: inline-flex; align-items: center; gap: 10px; font: 700 15px/1.2 Montserrat, sans-serif; text-decoration: none; padding: 13px 20px; border-radius: 6px; background: #d9a05b; color: #26231b">Dobij okvirnu cenu</a>
 </div>
 
+<div style="flex: 1 1 150px; min-width: 0">
+<p style="margin: 0 0 14px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #d9a05b">Stranica</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<a href="#radovi" style="color: #ece3d3; text-decoration: none">Naši radovi</a>
+<a href="galerija.html" style="color: #ece3d3; text-decoration: none">Galerija radova</a>
+<a href="#mehanizam" style="color: #ece3d3; text-decoration: none">Gradnja na videlu</a>
+<a href="#cena" style="color: #ece3d3; text-decoration: none">Cena</a>
+<a href="#kupci" style="color: #ece3d3; text-decoration: none">Kupci</a>
+<a href="#faq" style="color: #ece3d3; text-decoration: none">Pitanja</a>
+<a href="#kontakt" style="color: #ece3d3; text-decoration: none">Kontakt</a>
+</div>
+</div>
+
+<div style="flex: 1 1 200px; min-width: 0">
+<p style="margin: 0 0 14px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #d9a05b">Kontakt</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<a href="tel:+381642524562" style="font: 700 17px Montserrat, sans-serif; color: #ffffff; text-decoration: none">064 252 45 62</a>
+<span>Kragujevac</span>
+<span>Cela Srbija i Crna Gora</span>
+<span><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[E-pošta]</span></span>
+<span><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Radno vreme]</span></span>
+</div>
+</div>
+
+<div style="flex: 1 1 150px; min-width: 0">
+<p style="margin: 0 0 14px; font: 700 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #d9a05b">Pratite nas</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<a href="https://www.instagram.com/wolf.framevikendice/" style="display: inline-flex; align-items: center; gap: 8px; color: #ece3d3; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5"></circle></svg>Instagram</a>
+<a href="https://www.facebook.com/vuk.bulatovic.418918/" style="display: inline-flex; align-items: center; gap: 8px; color: #ece3d3; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"></path></svg>Facebook</a>
+</div>
+</div>
+
+</div>
+<div style="max-width: 1080px; margin: 48px auto 0; padding: 18px 24px 24px; box-sizing: border-box; border-top: 1px solid rgba(236,227,211,0.15); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: 13px; color: #9d927f">
+<span>© 2026 Wolf Frame · <span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Pun naziv firme, PIB]</span></span>
+<span><span style="background:rgba(134,120,98,0.16);border:1px dashed rgba(134,120,98,0.6);color:inherit;padding:0 5px;border-radius:4px;font:600 12px/1.6 Montserrat,sans-serif">[Politika privatnosti]</span></span>
+</div>
+</footer>
+
+</div>
 <script src="js/main.js" defer></script>
 </body>
 </html>
