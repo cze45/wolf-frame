@@ -12,3 +12,6 @@ Sve putanje su relativne, pa radi i pod `/wolf-frame/` na GitHub Pages i na Clou
 - Sva žuta polja (`class="ph"`) su podaci koji još nedostaju. Pronađi ih sa `grep -n 'class="ph"' index.html`.
 - Forma: `data-endpoint=""` u `index.html`. Dok je prazan, forma samo prikazuje poruku. Upiši URL (Formspree, Cloudflare Worker...) kad se poveže prijem upita.
 - Fotografije procesa su isečci iz Instagram priča (niska rezolucija). Zameni originalima.
+
+## Izvoz iz Claude Design-a
+`canvas-izvoz.html` je izvoz canvasa "Wolf Frame Landing" (spojen 11. 10.). Sačuvan je kao referenca; glavna stranica je `index.html`.
