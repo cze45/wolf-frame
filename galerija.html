@@ -9,8 +9,12 @@
 <meta name="theme-color" content="#2f3322">
 <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 <style>
+.a-skip{position:absolute;left:16px;top:-60px;z-index:100;padding:10px 16px;border-radius:6px;background:#d9a05b;color:#26231b;font:700 15px Montserrat,sans-serif;text-decoration:none}
+.a-skip:focus{top:12px}
+a,button,input,textarea,summary,label{touch-action:manipulation}
 /* Animacije: jedan stil pojavljivanja, suptilan hover, otvaranje pitanja */
 @keyframes a-gore{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 [data-hero]{animation:a-gore .6s ease-out both}
@@ -33,6 +37,7 @@ details>summary:hover{color:#8a5523}
 </style>
 </head>
 <body>
+<a class="a-skip" href="#sadrzaj">Preskoči na sadržaj</a>
 <div style="font-family: Mulish, system-ui, sans-serif; font-size: 17px; line-height: 1.65; color: #26231b; background: #f6eee0; text-wrap: pretty">
 
 <!-- Traka koncepta -->
@@ -43,7 +48,7 @@ details>summary:hover{color:#8a5523}
 <div style="max-width: 1080px; margin: 0 auto; padding: 14px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px">
 <a class="a-link" href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none">
 <span style="display: flex; flex-direction: column; line-height: 1.1">
-<b style="font: 800 16px Montserrat, sans-serif; letter-spacing: 0.04em; color: #ffffff">WOLF FRAME</b>
+<b translate="no" style="font: 800 16px Montserrat, sans-serif; letter-spacing: 0.04em; color: #ffffff">WOLF FRAME</b>
 <span style="font: 600 10px Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.75)">Izrada drvenih kuća</span>
 </span>
 </a>
@@ -57,7 +62,7 @@ details>summary:hover{color:#8a5523}
 </div>
 </header>
 
-<main>
+<main id="sadrzaj" tabindex="-1" style="outline: none">
 
 <!-- Uvod stranice -->
 <section style="background: #f6eee0; padding: 56px 0 40px; border-bottom: 1px solid #dccbb0">
@@ -172,7 +177,7 @@ details>summary:hover{color:#8a5523}
 <!-- Podnožje -->
 <footer style="background: #1a1812; color: #d1c6b2; padding: 28px 0; font-size: 14px; line-height: 1.6">
 <div style="max-width: 1080px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
-<span><b style="color: #ffffff; font-family: Montserrat, sans-serif; letter-spacing: 0.04em">WOLF FRAME</b> · Izrada drvenih kuća · Kragujevac</span>
+<span><b translate="no" style="color: #ffffff; font-family: Montserrat, sans-serif; letter-spacing: 0.04em">WOLF FRAME</b> · Izrada drvenih kuća · Kragujevac</span>
 <span style="display: flex; flex-wrap: wrap; gap: 6px 20px">
 <a class="a-link" href="tel:+381642524562" style="color: #d9a05b">064 252 45 62</a>
 <a class="a-link" href="https://www.instagram.com/wolf.framevikendice/" style="color: #ece3d3">Instagram</a>

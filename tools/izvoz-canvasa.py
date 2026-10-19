@@ -14,7 +14,7 @@ STATIC = {
     # početno stanje zaglavlja (preko hero dela)
     'navBg': 'transparent', 'navShadow': 'none', 'navFg': '#ffffff',
     'navLine': 'rgba(255,255,255,0.7)', 'callOpacity': '0', 'callVis': 'hidden',
-    'callShift': '-6px', 'callHidden': 'true', 'callTab': '-1',
+    'callShift': '-6px', 'callHidden': 'true', 'callTab': '-1', 'menuOpen': 'false',
 }
 LIVE = {  # vrednosti koje js/main.js menja
     'cenaOd': '11.200', 'cenaDo': '15.800', 'cenaM2': '320–450', 'nivoNaziv': 'Siva faza', 'm2': '35',
@@ -51,7 +51,8 @@ def page(title, desc, body, css, extra_head=''):
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#2f3322">
 {FONT_PRELOAD}
-{extra_head}<link rel="stylesheet" href="css/style.css">
+{extra_head}<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
 <style>
 {css}
 </style>
@@ -74,7 +75,9 @@ assert '/_blob/' not in b
 # Kalkulator: događaji idu u js/main.js
 b = b.replace('onClick="{{pickSiva}}"', 'data-nivo="siva"').replace('onClick="{{pickKljuc}}"', 'data-nivo="kljuc"')
 b = b.replace(' onChange="{{setM2}}"', '')
-b = b.replace('value="{{m2}}"', 'value="35"')
+b = b.replace('value="{{m2}}"', 'value="35"').replace('aria-valuetext="{{m2}} m²"', 'aria-valuetext="35 m²"')
+# Meni za telefon: događaji idu u js/main.js
+b = b.replace(' onClick="{{prebaciMeni}}"', '').replace(' onClick="{{zatvoriMeni}}"', '')
 for k, v in LIVE.items():
     b = b.replace('{{%s}}' % k, f'<span data-calc="{k}">{v}</span>')
 
@@ -84,17 +87,12 @@ assert 'id="nav-tel"' in b
 
 b = b.replace('zameniti cenama Wolf Frame u Tweaks', 'zameniti cenama Wolf Frame u js/main.js')
 
-# Forma
+# Forma: polja, greške i poruka su već u canvasu; ovde samo omotač <form>
 b = b.replace('<div style="flex: 1; display: flex; flex-direction: column; gap: 14px">\n<div><label for="ime"',
               '<form id="forma" data-endpoint="" novalidate style="flex: 1; display: flex; flex-direction: column; gap: 14px; margin: 0">\n<div><label for="ime"', 1)
-b = b.replace('<input id="ime" type="text"', '<input id="ime" name="ime" type="text" required')
-b = b.replace('<input id="telefon" type="tel"', '<input id="telefon" name="telefon" type="tel" required')
-b = b.replace('<textarea id="opis"', '<textarea id="opis" name="opis"')
-b = b.replace('<input type="checkbox" style="margin-top: 3px;', '<input type="checkbox" name="saglasnost" required style="margin-top: 3px;')
-b = b.replace('<button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%;',
-              '<p id="forma-msg" role="status" aria-live="polite" hidden style="margin: 0; padding: 10px 12px; border-radius: 6px; background: #f6eee0; border: 1px solid #cfbe9f; font-size: 15px; color: #26231b"></p>\n<button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%;', 1)
 b = b.replace('Broj koristimo samo da te pozovemo povodom upita.</p>\n</div>',
               'Broj koristimo samo da te pozovemo povodom upita.</p>\n</form>', 1)
+assert 'type="submit"' in b and 'id="forma-msg"' in b and 'id="err-ime"' in b
 assert b.count('<form') == 1 and b.count('</form>') == 1
 
 for k, v in STATIC.items():

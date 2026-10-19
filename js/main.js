@@ -50,10 +50,40 @@
         tel.setAttribute('aria-hidden', String(!vidi));
         tel.setAttribute('tabindex', vidi ? '0' : '-1');
       }
+      if (menuBtn) menuBtn.style.borderColor = novo === 'svetla' ? 'rgba(38,35,27,0.45)' : 'rgba(255,255,255,0.7)';
     };
-    window.addEventListener('scroll', proveriNav, { passive: true });
-    window.addEventListener('resize', proveriNav);
+    // Merenje najviše jednom po frejmu
+    var zakazano = false;
+    var naScroll = function () {
+      if (zakazano) return;
+      zakazano = true;
+      requestAnimationFrame(function () { zakazano = false; proveriNav(); });
+    };
+    window.addEventListener('scroll', naScroll, { passive: true });
+    window.addEventListener('resize', naScroll);
     proveriNav();
+  }
+
+  // Meni na telefonu
+  var menuBtn = document.getElementById('nav-menu');
+  var linkovi = document.getElementById('nav-linkovi');
+  if (nav && menuBtn && linkovi) {
+    var postavi = function (otvoren) {
+      nav.setAttribute('data-open', String(otvoren));
+      menuBtn.setAttribute('aria-expanded', String(otvoren));
+    };
+    menuBtn.addEventListener('click', function () {
+      postavi(menuBtn.getAttribute('aria-expanded') !== 'true');
+    });
+    linkovi.addEventListener('click', function (e) {
+      if (e.target.closest('a')) postavi(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+        postavi(false);
+        menuBtn.focus();
+      }
+    });
   }
 
   // Kalkulator okvirne cene (cene po m² su primer, zameniti cenama firme)
@@ -70,6 +100,7 @@
       var m2 = Number(range.value);
       var c = CENE[nivo];
       upisi('m2', m2);
+      range.setAttribute('aria-valuetext', m2 + ' m²');
       upisi('cenaOd', fmt(c[0] * m2));
       upisi('cenaDo', fmt(c[1] * m2));
       upisi('cenaM2', c[0] + '–' + c[1]);
@@ -107,25 +138,34 @@
     msg.hidden = !text;
   }
 
-  // Oznaka greške nestaje čim osoba ispravi polje
+  // Greška stoji odmah ispod polja (#err-ime, #err-telefon, #err-saglasnost)
+  function setError(name, text) {
+    var el = form.elements[name];
+    var out = document.getElementById('err-' + name);
+    if (text) el.setAttribute('aria-invalid', 'true');
+    else el.removeAttribute('aria-invalid');
+    if (out) { out.textContent = text || ''; out.hidden = !text; }
+  }
+
+  // Greška nestaje čim osoba ispravi polje
   Object.keys(rules).forEach(function (name) {
     var el = form.elements[name];
     el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function () {
-      if (rules[name].ok(el)) el.removeAttribute('aria-invalid');
+      if (rules[name].ok(el)) setError(name, '');
     });
   });
 
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
+    say('');
     var first = null;
     Object.keys(rules).forEach(function (name) {
       var el = form.elements[name];
       var ok = rules[name].ok(el);
-      if (ok) el.removeAttribute('aria-invalid');
-      else el.setAttribute('aria-invalid', 'true');
-      if (!ok && !first) first = { el: el, text: rules[name].text };
+      setError(name, ok ? '' : rules[name].text);
+      if (!ok && !first) first = el;
     });
-    if (first) { say(first.text); first.el.focus(); return; }
+    if (first) { first.focus(); return; }
 
     var endpoint = form.getAttribute('data-endpoint');
     if (!endpoint) {
