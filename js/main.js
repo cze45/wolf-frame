@@ -7,7 +7,12 @@
   var reveal = document.querySelectorAll('[data-reveal]');
   if (reveal.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('a-js');
+    // Zaštita: ako posmatrač ne javi ništa za 1 s, sav sadržaj se prikaže
+    var straza = setTimeout(function () {
+      Array.prototype.forEach.call(reveal, function (el) { el.classList.add('a-in'); });
+    }, 1000);
     var ro = new IntersectionObserver(function (unosi) {
+      clearTimeout(straza);
       unosi.forEach(function (u) {
         if (u.isIntersecting) { u.target.classList.add('a-in'); ro.unobserve(u.target); }
       });
