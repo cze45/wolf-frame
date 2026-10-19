@@ -10,15 +10,11 @@
 
 /* Raspored i boje su u inline stilovima stranica (izvoz iz Claude Design canvasa).
    Ovde su samo fontovi i osnovna pravila. */
-/* na telefonu zaglavlje ima samo logo i dugme za poziv, da ostane u jednom redu */
-@media (max-width:760px){#nav nav{display:none!important}#nav>div{flex-wrap:nowrap!important}#nav-tel{font-size:0!important;gap:0!important;padding:10px!important}}
 html{scroll-padding-top:72px;-webkit-text-size-adjust:100%}
 body{margin:0;background:#f6eee0}
 img{max-width:100%}
 a,button,input,textarea,summary{-webkit-tap-highlight-color:transparent}
 :focus-visible{outline:3px solid #d9a05b;outline-offset:3px}
-summary::-webkit-details-marker{display:none}
-details[open] summary span:last-child{transform:rotate(45deg)}
-summary span:last-child{transition:transform .2s ease}
 input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#b3412e!important}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+summary::-webkit-details-marker{display:none}
+#forma-msg:not([hidden]){animation:a-gore .25s ease-out}

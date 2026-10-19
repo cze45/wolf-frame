@@ -28,17 +28,19 @@ def body_of(path):
     s = open(path, encoding='utf-8').read()
     title = re.search(r'<title>(.*?)</title>', s).group(1)
     body = s[s.index('<x-dc>') + 6:s.index('</x-dc>')]
+    helmet = re.search(r'<helmet>(.*?)</helmet>', body, flags=re.S).group(1)
+    # stilovi iz canvasa (animacije, pravila za telefon) idu u <head>
+    css = '\n'.join(re.findall(r'<style>\s*(.*?)\s*</style>', helmet, flags=re.S)).replace('body{margin:0}\n', '')
     body = re.sub(r'<helmet>.*?</helmet>\s*', '', body, flags=re.S)
-    return title, body.strip() + '\n'
+    return title, body.strip() + '\n', css
 
 
 def common(b):
     b = b.replace('href="Galerija.dc.html', 'href="galerija.html').replace('href="Main.dc.html', 'href="index.html')
-    b = b.replace('/_blob/de37e600cac9a406a03e2fdadd5597f3', 'assets/img/logo.webp')
     return b
 
 
-def page(title, desc, body, extra_head=''):
+def page(title, desc, body, css, extra_head=''):
     return f'''<!doctype html>
 <html lang="sr-Latn">
 <head>
@@ -48,9 +50,11 @@ def page(title, desc, body, extra_head=''):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#2f3322">
-<link rel="icon" href="assets/img/logo.webp" type="image/webp">
 {FONT_PRELOAD}
 {extra_head}<link rel="stylesheet" href="css/style.css">
+<style>
+{css}
+</style>
 </head>
 <body>
 {body}<script src="js/main.js" defer></script>
@@ -60,7 +64,7 @@ def page(title, desc, body, extra_head=''):
 
 
 # ---- Glavna stranica ----
-title, b = body_of(f'{SRC}/Main.dc.html')
+title, b, css = body_of(f'{SRC}/Main.dc.html')
 b = common(b)
 
 b = b.replace('<img src="/_blob/4853c60635104a2236bc936247eb9624" width="1500" height="1000" alt=""',
@@ -101,15 +105,15 @@ assert not left, left
 hero_preload = '<link rel="preload" as="image" href="assets/img/hero-aframe.webp" imagesrcset="assets/img/hero-aframe-900.webp 900w, assets/img/hero-aframe.webp 1500w" imagesizes="100vw">\n'
 open(f'{OUT}/index.html', 'w', encoding='utf-8').write(page(
     title, 'A-frame vikendice po meri tvog placa. Kragujevac, cela Srbija i Crna Gora. Izračunaj okvirnu cenu ili pošalji upit.',
-    b, hero_preload))
+    b, css, hero_preload))
 
 # ---- Galerija ----
-title, b = body_of(f'{SRC}/Galerija.dc.html')
+title, b, css = body_of(f'{SRC}/Galerija.dc.html')
 b = common(b)
 for k, v in STATIC.items():
     b = b.replace('{{%s}}' % k, v)
 left = re.findall(r'\{\{[^}]+\}\}|/_blob/', b)
 assert not left, left
 open(f'{OUT}/galerija.html', 'w', encoding='utf-8').write(page(
-    title, 'Galerija radova Wolf Frame: A-frame vikendice, bungalovi i brvnare, po projektima.', b))
+    title, 'Galerija radova Wolf Frame: A-frame vikendice, bungalovi i brvnare, po projektima.', b, css))
 print('ok')

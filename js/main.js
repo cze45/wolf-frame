@@ -3,6 +3,18 @@
 
   var NAV_H = 72;
 
+  // Pojavljivanje sekcija pri skrolovanju (jedan stil, jednom po sekciji)
+  var reveal = document.querySelectorAll('[data-reveal]');
+  if (reveal.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('a-js');
+    var ro = new IntersectionObserver(function (unosi) {
+      unosi.forEach(function (u) {
+        if (u.isIntersecting) { u.target.classList.add('a-in'); ro.unobserve(u.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    Array.prototype.forEach.call(reveal, function (el) { ro.observe(el); });
+  }
+
   // Zaglavlje: providno preko hero dela, maslinasto posle njega,
   // svetlo preko maslinastih delova (data-nav="svetla")
   var nav = document.getElementById('nav');
